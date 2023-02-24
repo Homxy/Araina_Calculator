@@ -24,6 +24,7 @@ namespace ClassLibrary1 {
 			//
 		}
 
+
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -70,6 +71,7 @@ namespace ClassLibrary1 {
 	private: System::Windows::Forms::Button^ num7;
 	private: System::Windows::Forms::Button^ numBack;
 	private: System::Windows::Forms::Button^ numClear;
+
 
 
 	private:
@@ -120,6 +122,7 @@ namespace ClassLibrary1 {
 			this->numDot->TabIndex = 0;
 			this->numDot->Text = L".";
 			this->numDot->UseVisualStyleBackColor = false;
+			this->numDot->Click += gcnew System::EventHandler(this, &NumPanel::numDot_Click);
 			// 
 			// num0
 			// 
@@ -137,6 +140,7 @@ namespace ClassLibrary1 {
 			this->num0->TabIndex = 1;
 			this->num0->Text = L"0";
 			this->num0->UseVisualStyleBackColor = false;
+			this->num0->Click += gcnew System::EventHandler(this, &NumPanel::num0_Click);
 			// 
 			// button3
 			// 
@@ -171,6 +175,7 @@ namespace ClassLibrary1 {
 			this->numPlus->TabIndex = 3;
 			this->numPlus->Text = L"+";
 			this->numPlus->UseVisualStyleBackColor = false;
+			this->numPlus->Click += gcnew System::EventHandler(this, &NumPanel::numPlus_Click);
 			// 
 			// numMinus
 			// 
@@ -188,6 +193,7 @@ namespace ClassLibrary1 {
 			this->numMinus->TabIndex = 7;
 			this->numMinus->Text = L"-";
 			this->numMinus->UseVisualStyleBackColor = false;
+			this->numMinus->Click += gcnew System::EventHandler(this, &NumPanel::numMinus_Click);
 			// 
 			// num3
 			// 
@@ -204,6 +210,7 @@ namespace ClassLibrary1 {
 			this->num3->TabIndex = 6;
 			this->num3->Text = L"3";
 			this->num3->UseVisualStyleBackColor = false;
+			this->num3->Click += gcnew System::EventHandler(this, &NumPanel::num3_Click);
 			// 
 			// num2
 			// 
@@ -221,6 +228,7 @@ namespace ClassLibrary1 {
 			this->num2->TabIndex = 5;
 			this->num2->Text = L"2";
 			this->num2->UseVisualStyleBackColor = false;
+			this->num2->Click += gcnew System::EventHandler(this, &NumPanel::num2_Click);
 			// 
 			// num1
 			// 
@@ -237,6 +245,7 @@ namespace ClassLibrary1 {
 			this->num1->TabIndex = 4;
 			this->num1->Text = L"1";
 			this->num1->UseVisualStyleBackColor = false;
+			this->num1->Click += gcnew System::EventHandler(this, &NumPanel::num1_Click);
 			// 
 			// numMulti
 			// 
@@ -254,6 +263,7 @@ namespace ClassLibrary1 {
 			this->numMulti->TabIndex = 11;
 			this->numMulti->Text = L"×";
 			this->numMulti->UseVisualStyleBackColor = false;
+			this->numMulti->Click += gcnew System::EventHandler(this, &NumPanel::numMulti_Click);
 			// 
 			// num6
 			// 
@@ -270,6 +280,7 @@ namespace ClassLibrary1 {
 			this->num6->TabIndex = 10;
 			this->num6->Text = L"6";
 			this->num6->UseVisualStyleBackColor = false;
+			this->num6->Click += gcnew System::EventHandler(this, &NumPanel::num6_Click);
 			// 
 			// num5
 			// 
@@ -286,6 +297,7 @@ namespace ClassLibrary1 {
 			this->num5->TabIndex = 9;
 			this->num5->Text = L"5";
 			this->num5->UseVisualStyleBackColor = false;
+			this->num5->Click += gcnew System::EventHandler(this, &NumPanel::num5_Click);
 			// 
 			// num4
 			// 
@@ -302,6 +314,7 @@ namespace ClassLibrary1 {
 			this->num4->TabIndex = 8;
 			this->num4->Text = L"4";
 			this->num4->UseVisualStyleBackColor = false;
+			this->num4->Click += gcnew System::EventHandler(this, &NumPanel::num4_Click);
 			// 
 			// numDivide
 			// 
@@ -319,6 +332,7 @@ namespace ClassLibrary1 {
 			this->numDivide->TabIndex = 15;
 			this->numDivide->Text = L"÷";
 			this->numDivide->UseVisualStyleBackColor = false;
+			this->numDivide->Click += gcnew System::EventHandler(this, &NumPanel::numDivide_Click);
 			// 
 			// num9
 			// 
@@ -335,6 +349,7 @@ namespace ClassLibrary1 {
 			this->num9->TabIndex = 14;
 			this->num9->Text = L"9";
 			this->num9->UseVisualStyleBackColor = false;
+			this->num9->Click += gcnew System::EventHandler(this, &NumPanel::num9_Click);
 			// 
 			// num8
 			// 
@@ -351,6 +366,7 @@ namespace ClassLibrary1 {
 			this->num8->TabIndex = 13;
 			this->num8->Text = L"8";
 			this->num8->UseVisualStyleBackColor = false;
+			this->num8->Click += gcnew System::EventHandler(this, &NumPanel::num8_Click);
 			// 
 			// num7
 			// 
@@ -367,6 +383,7 @@ namespace ClassLibrary1 {
 			this->num7->TabIndex = 12;
 			this->num7->Text = L"7";
 			this->num7->UseVisualStyleBackColor = false;
+			this->num7->Click += gcnew System::EventHandler(this, &NumPanel::num7_Click);
 			// 
 			// numBack
 			// 
@@ -384,6 +401,7 @@ namespace ClassLibrary1 {
 			this->numBack->TabIndex = 16;
 			this->numBack->Text = L"<-";
 			this->numBack->UseVisualStyleBackColor = false;
+			this->numBack->Click += gcnew System::EventHandler(this, &NumPanel::numBack_Click);
 			// 
 			// numClear
 			// 
@@ -400,6 +418,7 @@ namespace ClassLibrary1 {
 			this->numClear->TabIndex = 17;
 			this->numClear->Text = L"C";
 			this->numClear->UseVisualStyleBackColor = false;
+			this->numClear->Click += gcnew System::EventHandler(this, &NumPanel::numClear_Click);
 			// 
 			// NumPanel
 			// 
@@ -431,5 +450,90 @@ namespace ClassLibrary1 {
 
 		}
 #pragma endregion
-	};
+		private: String^ total= gcnew String("");
+
+	public: String^ SendTotal() {
+		return total;
+	}
+	
+	public: event EventHandler^ ValueChanged;
+
+	private: System::Void num0_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (total != "") {
+			total += num0->Text;
+		}
+		
+	}
+
+	private: System::Void num1_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += "1";
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num2_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += "2";
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num3_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += "3";
+		ValueChanged(this, EventArgs::Empty);
+	}
+
+	private: System::Void numDot_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += numDot->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num4_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += num4->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num5_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += num5->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num6_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += num6->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num7_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += num7->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num8_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += num8->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void num9_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += num9->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void numPlus_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += numPlus->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void numMinus_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += numMinus->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void numMulti_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += numMulti->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void numDivide_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += numDivide->Text;
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void numBack_Click(System::Object^ sender, System::EventArgs^ e) {
+		int index = total->Length;
+		if (total != "") {
+			index--;
+			total = total->Remove(index);
+		}
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void numClear_Click(System::Object^ sender, System::EventArgs^ e) {
+		total = "";
+		ValueChanged(this, EventArgs::Empty);
+	}
+
+};
 }
