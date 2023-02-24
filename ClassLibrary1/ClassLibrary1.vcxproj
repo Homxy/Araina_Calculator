@@ -160,6 +160,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AlphabetPanel.resx">
+      <DependentUpon>AlphabetPanel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxPanel.resx">
+      <DependentUpon>FxPanel.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NumPanel.resx">
       <DependentUpon>NumPanel.h</DependentUpon>
     </EmbeddedResource>
