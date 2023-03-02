@@ -451,75 +451,105 @@ namespace ClassLibrary1 {
 		}
 #pragma endregion
 		private: String^ total= gcnew String("");
-
+		private: String^ cal = gcnew String("");
 	public: String^ SendTotal() {
 		return total;
+	}
+	public: String^ Sendcal() {
+		return cal;
 	}
 	
 	public: event EventHandler^ ValueChanged;
 
 	private: System::Void num0_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "") {
-			total += num0->Text;
-		}
+		total += num0->Text;
+		cal += "0";
+		
+		ValueChanged(this, EventArgs::Empty);
 		
 	}
 
 	private: System::Void num1_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += "1";
+		cal += "1";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num2_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += "2";
+		cal += "2";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num3_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += "3";
+		cal += "3";
 		ValueChanged(this, EventArgs::Empty);
 	}
 
 	private: System::Void numDot_Click(System::Object^ sender, System::EventArgs^ e) {
-		total += numDot->Text;
+		if (total!="") {
+			total += numDot->Text;
+			cal += ".";
+		}
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num4_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += num4->Text;
+		cal += "4";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num5_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += num5->Text;
+		cal += "5";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num6_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += num6->Text;
+		cal += "6";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num7_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += num7->Text;
+		cal += "7";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num8_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += num8->Text;
+		cal += "8";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void num9_Click(System::Object^ sender, System::EventArgs^ e) {
 		total += num9->Text;
+		cal += "9";
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numPlus_Click(System::Object^ sender, System::EventArgs^ e) {
-		total += numPlus->Text;
+		if (total!="") {
+			total += numPlus->Text;
+			cal += "+";
+		}
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numMinus_Click(System::Object^ sender, System::EventArgs^ e) {
-		total += numMinus->Text;
+		if (total != "") {
+			total += numMinus->Text;
+			cal += "-";
+		}
+		
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numMulti_Click(System::Object^ sender, System::EventArgs^ e) {
-		total += numMulti->Text;
+		if (total != "") {
+			total += numMulti->Text;
+			cal += "*";
+		}
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numDivide_Click(System::Object^ sender, System::EventArgs^ e) {
-		total += numDivide->Text;
+		if (total != "") {
+			total += numDivide->Text;
+			cal += "/";
+		}
+		
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numBack_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -527,11 +557,13 @@ namespace ClassLibrary1 {
 		if (total != "") {
 			index--;
 			total = total->Remove(index);
+			cal = cal->Remove(index);
 		}
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numClear_Click(System::Object^ sender, System::EventArgs^ e) {
 		total = "";
+		cal = "";
 		ValueChanged(this, EventArgs::Empty);
 	}
 

@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <vector>;
 namespace Araina {
 
 	using namespace System;
@@ -49,6 +50,9 @@ namespace Araina {
 	private: ClassLibrary1::AlphabetPanel^ alphabetPanel2;
 	private: ClassLibrary1::FxPanel^ fxPanel1;
 	private: ClassLibrary1::NumPanel^ numPanel1;
+	private: System::Windows::Forms::Button^ Button_Calculate;
+	private: System::Windows::Forms::Label^ label2;
+
 
 
 
@@ -70,6 +74,7 @@ namespace Araina {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->Select_Num = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->Button_Calculate = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->alphabetPanel1 = (gcnew ClassLibrary1::AlphabetPanel());
 			this->Select_Fx = (gcnew System::Windows::Forms::Button());
@@ -78,6 +83,7 @@ namespace Araina {
 			this->alphabetPanel2 = (gcnew ClassLibrary1::AlphabetPanel());
 			this->fxPanel1 = (gcnew ClassLibrary1::FxPanel());
 			this->numPanel1 = (gcnew ClassLibrary1::NumPanel());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->SuspendLayout();
@@ -105,7 +111,7 @@ namespace Araina {
 				static_cast<System::Byte>(0)));
 			this->Select_Num->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
-			this->Select_Num->Location = System::Drawing::Point(164, 1);
+			this->Select_Num->Location = System::Drawing::Point(95, 0);
 			this->Select_Num->Name = L"Select_Num";
 			this->Select_Num->Size = System::Drawing::Size(60, 50);
 			this->Select_Num->TabIndex = 1;
@@ -117,6 +123,7 @@ namespace Araina {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				static_cast<System::Int32>(static_cast<System::Byte>(38)));
+			this->panel1->Controls->Add(this->Button_Calculate);
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Controls->Add(this->Select_Fx);
 			this->panel1->Controls->Add(this->Select_Alpha);
@@ -125,6 +132,24 @@ namespace Araina {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(385, 50);
 			this->panel1->TabIndex = 2;
+			// 
+			// Button_Calculate
+			// 
+			this->Button_Calculate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(75)), static_cast<System::Int32>(static_cast<System::Byte>(75)));
+			this->Button_Calculate->FlatAppearance->BorderColor = System::Drawing::Color::Gray;
+			this->Button_Calculate->FlatAppearance->BorderSize = 0;
+			this->Button_Calculate->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Button_Calculate->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Button_Calculate->ForeColor = System::Drawing::Color::White;
+			this->Button_Calculate->Location = System::Drawing::Point(227, 0);
+			this->Button_Calculate->Name = L"Button_Calculate";
+			this->Button_Calculate->Size = System::Drawing::Size(60, 50);
+			this->Button_Calculate->TabIndex = 4;
+			this->Button_Calculate->Text = L"Cal\r\n";
+			this->Button_Calculate->UseVisualStyleBackColor = false;
+			this->Button_Calculate->Click += gcnew System::EventHandler(this, &MainForm::Button_Calculate_Click);
 			// 
 			// panel2
 			// 
@@ -154,7 +179,7 @@ namespace Araina {
 				static_cast<System::Byte>(0)));
 			this->Select_Fx->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
-			this->Select_Fx->Location = System::Drawing::Point(67, 1);
+			this->Select_Fx->Location = System::Drawing::Point(29, 0);
 			this->Select_Fx->Name = L"Select_Fx";
 			this->Select_Fx->Size = System::Drawing::Size(60, 50);
 			this->Select_Fx->TabIndex = 3;
@@ -173,7 +198,7 @@ namespace Araina {
 				static_cast<System::Byte>(0)));
 			this->Select_Alpha->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
-			this->Select_Alpha->Location = System::Drawing::Point(257, 1);
+			this->Select_Alpha->Location = System::Drawing::Point(161, 0);
 			this->Select_Alpha->Name = L"Select_Alpha";
 			this->Select_Alpha->Size = System::Drawing::Size(60, 50);
 			this->Select_Alpha->TabIndex = 2;
@@ -220,6 +245,18 @@ namespace Araina {
 			this->numPanel1->TabIndex = 8;
 			this->numPanel1->ValueChanged += gcnew System::EventHandler(this, &MainForm::numPanel1_ValueChanged);
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->label2->Location = System::Drawing::Point(304, 71);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(68, 30);
+			this->label2->TabIndex = 9;
+			this->label2->Text = L"label2";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -227,6 +264,7 @@ namespace Araina {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
 				static_cast<System::Int32>(static_cast<System::Byte>(28)));
 			this->ClientSize = System::Drawing::Size(384, 461);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->numPanel1);
 			this->Controls->Add(this->fxPanel1);
 			this->Controls->Add(this->alphabetPanel2);
@@ -242,7 +280,63 @@ namespace Araina {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
+	public: void eval(String^ textin) {
+		double result = 0;
+		int j = 0;
+		char op = '+';
+		String^ ftext = "";
+		double num = 0;
+		for (int i = 0; i < textin->Length;) {
+			if (textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
+				ftext = "";
+				while (i < textin->Length && textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
+					ftext += textin[i];
+					i++;
+				}
+				num = Convert::ToDouble(ftext);
+			}
+			else if (textin[i] == '+' || textin[i] == '-' || textin[i] == '*' || textin[i] == '/') {
+				switch (op) {
+				case '+':
+					result += num;
+					break;
+				case '-':
+					result -= num;
+					break;
+				case '*':
+					result *= num;
+					break;
+				case '/':
+					result /= num;
+					break;
+				}
+				op = textin[i];
+				i++;
+			}
+			
+		}
+
+		switch (op) {
+		case '+':
+			result += num;
+			break;
+		case '-':
+			result -= num;
+			break;
+		case '*':
+			result *= num;
+			break;
+		case '/':
+			result /= num;
+			break;
+		}
+
+		label2->Text = Convert::ToString(result);
+	}
+
+
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		numPanel1->BringToFront();
 	}
@@ -261,5 +355,8 @@ namespace Araina {
 		label1->Text = numPanel1->SendTotal();
 	}
 
+	private: System::Void Button_Calculate_Click(System::Object^ sender, System::EventArgs^ e) {
+		eval(numPanel1->Sendcal());
+	}
 };
 }

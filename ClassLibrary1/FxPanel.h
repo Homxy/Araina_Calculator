@@ -107,6 +107,7 @@ namespace ClassLibrary1 {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &FxPanel::button1_Click);
 			// 
 			// button2
 			// 
@@ -444,5 +445,7 @@ namespace ClassLibrary1 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
