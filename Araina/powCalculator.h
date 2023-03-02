@@ -7,10 +7,3 @@ void power(double x,double y,double z){
         cout << pow(x,pow(y,z));
     }else cout << pow(x,y);
 }
-
-int main(){
-    double num1,num2,num3;
-    cout << "insert : ";
-    cin >> num1 >> num2 >> num3;
-    power(num1,num2,num3);
-}
