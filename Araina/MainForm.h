@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include <vector>;
+#include <vector>
 namespace Araina {
 
 	using namespace System;
@@ -288,6 +288,8 @@ namespace Araina {
 		char op = '+';
 		String^ ftext = "";
 		double num = 0;
+		std::vector<double> n;
+		std::vector<char> c;
 		for (int i = 0; i < textin->Length;) {
 			if (textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
 				ftext = "";
@@ -296,45 +298,49 @@ namespace Araina {
 					i++;
 				}
 				num = Convert::ToDouble(ftext);
+				n.push_back(num);
 			}
 			else if (textin[i] == '+' || textin[i] == '-' || textin[i] == '*' || textin[i] == '/') {
-				switch (op) {
-				case '+':
-					result += num;
-					break;
-				case '-':
-					result -= num;
-					break;
-				case '*':
-					result *= num;
-					break;
-				case '/':
-					result /= num;
-					break;
-				}
 				op = textin[i];
+				c.push_back(op);
 				i++;
 			}
+		}
+		for (int k = c.size(); k > 0; k--) {
+			char op = c[k - 1];
+			if (op == '*') {
+				double num1 = n[k - 1];
+				double num2 = n[k];
+				n.erase(n.begin() + k);
+				n.erase(n.begin() + k - 1);
+				c.erase(c.begin() + k - 1);
+				n.push_back(num1 * num2);
+			}
+			else if (op == '/') {
+				double num1 = n[k - 1];
+				double num2 = n[k];
+				n.erase(n.begin() + k);
+				n.erase(n.begin() + k - 1);
+				c.erase(c.begin() + k - 1);
+				n.push_back(num1 / num2);
+
+			}
+		}
+		result = n[0];
+		for (int j = 1; j < n.size(); j++) {
+			if (c[j-1] == '+') {
+				result += n[j];
+			}
+			else if (c[j-1] == '-') {
+				result -= n[j];
+			}
+		}
+		
 			
-		}
-
-		switch (op) {
-		case '+':
-			result += num;
-			break;
-		case '-':
-			result -= num;
-			break;
-		case '*':
-			result *= num;
-			break;
-		case '/':
-			result /= num;
-			break;
-		}
-
 		label2->Text = Convert::ToString(result);
 	}
+
+
 
 
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -357,6 +363,7 @@ namespace Araina {
 
 	private: System::Void Button_Calculate_Click(System::Object^ sender, System::EventArgs^ e) {
 		eval(numPanel1->Sendcal());
+
 	}
 };
 }
