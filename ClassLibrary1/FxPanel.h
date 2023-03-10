@@ -1,5 +1,6 @@
 #pragma once
 #include "NumPanel.h"
+#include "../Araina/VectorForm.h"
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -57,6 +58,7 @@ namespace ClassLibrary1 {
 	private: System::Windows::Forms::Button^ button18;
 	private: System::Windows::Forms::Button^ button19;
 	private: System::Windows::Forms::Button^ button20;
+	private: Araina::VectorForm^ VectorForm;
 
 	private:
 		/// <summary>
@@ -71,6 +73,7 @@ namespace ClassLibrary1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->VectorForm = (gcnew Araina::VectorForm());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -109,6 +112,7 @@ namespace ClassLibrary1 {
 			this->button1->Text = L"x²";
 			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &FxPanel::button1_Click);
 			// 
 			// button2
 			// 
@@ -123,8 +127,9 @@ namespace ClassLibrary1 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(60, 60);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"Vec tor";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &FxPanel::button2_Click);
 			// 
 			// button3
 			// 
@@ -447,5 +452,10 @@ namespace ClassLibrary1 {
 		}
 #pragma endregion
 	
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	VectorForm->ShowDialog(this);
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
