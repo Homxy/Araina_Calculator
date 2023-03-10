@@ -113,7 +113,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->numDot->FlatAppearance->BorderSize = 0;
 			this->numDot->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numDot->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numDot->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numDot->ForeColor = System::Drawing::Color::White;
 			this->numDot->Location = System::Drawing::Point(26, 217);
@@ -131,7 +131,7 @@ namespace ClassLibrary1 {
 			this->num0->Cursor = System::Windows::Forms::Cursors::Default;
 			this->num0->FlatAppearance->BorderSize = 0;
 			this->num0->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num0->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num0->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num0->ForeColor = System::Drawing::Color::White;
 			this->num0->Location = System::Drawing::Point(92, 217);
@@ -148,7 +148,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button3->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -165,7 +165,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->numPlus->FlatAppearance->BorderSize = 0;
 			this->numPlus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numPlus->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numPlus->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numPlus->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -183,7 +183,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->numMinus->FlatAppearance->BorderSize = 0;
 			this->numMinus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numMinus->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numMinus->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numMinus->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -201,7 +201,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num3->FlatAppearance->BorderSize = 0;
 			this->num3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num3->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num3->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num3->ForeColor = System::Drawing::Color::White;
 			this->num3->Location = System::Drawing::Point(158, 151);
@@ -219,7 +219,7 @@ namespace ClassLibrary1 {
 			this->num2->Cursor = System::Windows::Forms::Cursors::Default;
 			this->num2->FlatAppearance->BorderSize = 0;
 			this->num2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num2->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num2->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num2->ForeColor = System::Drawing::Color::White;
 			this->num2->Location = System::Drawing::Point(92, 151);
@@ -236,7 +236,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num1->FlatAppearance->BorderSize = 0;
 			this->num1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num1->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num1->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num1->ForeColor = System::Drawing::Color::White;
 			this->num1->Location = System::Drawing::Point(26, 151);
@@ -253,7 +253,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->numMulti->FlatAppearance->BorderSize = 0;
 			this->numMulti->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numMulti->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numMulti->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numMulti->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -271,7 +271,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num6->FlatAppearance->BorderSize = 0;
 			this->num6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num6->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num6->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num6->ForeColor = System::Drawing::Color::White;
 			this->num6->Location = System::Drawing::Point(158, 85);
@@ -288,7 +288,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num5->FlatAppearance->BorderSize = 0;
 			this->num5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num5->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num5->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num5->ForeColor = System::Drawing::Color::White;
 			this->num5->Location = System::Drawing::Point(92, 85);
@@ -305,7 +305,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num4->FlatAppearance->BorderSize = 0;
 			this->num4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num4->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num4->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num4->ForeColor = System::Drawing::Color::White;
 			this->num4->Location = System::Drawing::Point(26, 85);
@@ -322,7 +322,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->numDivide->FlatAppearance->BorderSize = 0;
 			this->numDivide->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numDivide->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numDivide->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numDivide->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -340,7 +340,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num9->FlatAppearance->BorderSize = 0;
 			this->num9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num9->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num9->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num9->ForeColor = System::Drawing::Color::White;
 			this->num9->Location = System::Drawing::Point(158, 19);
@@ -357,7 +357,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num8->FlatAppearance->BorderSize = 0;
 			this->num8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num8->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num8->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num8->ForeColor = System::Drawing::Color::White;
 			this->num8->Location = System::Drawing::Point(92, 19);
@@ -374,7 +374,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->num7->FlatAppearance->BorderSize = 0;
 			this->num7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->num7->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->num7->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->num7->ForeColor = System::Drawing::Color::White;
 			this->num7->Location = System::Drawing::Point(26, 19);
@@ -391,7 +391,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->numBack->FlatAppearance->BorderSize = 0;
 			this->numBack->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numBack->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numBack->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numBack->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -409,7 +409,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->numClear->FlatAppearance->BorderSize = 0;
 			this->numClear->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->numClear->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numClear->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numClear->ForeColor = System::Drawing::Color::White;
 			this->numClear->Location = System::Drawing::Point(290, 85);
@@ -450,8 +450,8 @@ namespace ClassLibrary1 {
 
 		}
 #pragma endregion
-		private: String^ total= gcnew String("");
-		private: String^ cal = gcnew String("");
+		public: String^ total= gcnew String("");
+		public: String^ cal = gcnew String("");
 	public: String^ SendTotal() {
 		return total;
 	}

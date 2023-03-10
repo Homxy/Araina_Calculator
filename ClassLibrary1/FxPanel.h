@@ -1,4 +1,5 @@
 #pragma once
+#include "NumPanel.h"
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -98,16 +99,16 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
 			this->button1->Location = System::Drawing::Point(27, 24);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(60, 60);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"x²";
+			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &FxPanel::button1_Click);
 			// 
 			// button2
 			// 
@@ -115,7 +116,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button2->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::White;
 			this->button2->Location = System::Drawing::Point(93, 24);
@@ -131,7 +132,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button3->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::White;
 			this->button3->Location = System::Drawing::Point(159, 24);
@@ -147,7 +148,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button4->FlatAppearance->BorderSize = 0;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button4->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::White;
 			this->button4->Location = System::Drawing::Point(225, 24);
@@ -163,7 +164,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button5->FlatAppearance->BorderSize = 0;
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button5->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::Color::White;
 			this->button5->Location = System::Drawing::Point(291, 24);
@@ -179,7 +180,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button6->FlatAppearance->BorderSize = 0;
 			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button6->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button6->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button6->ForeColor = System::Drawing::Color::White;
 			this->button6->Location = System::Drawing::Point(291, 90);
@@ -195,7 +196,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button7->FlatAppearance->BorderSize = 0;
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button7->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button7->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button7->ForeColor = System::Drawing::Color::White;
 			this->button7->Location = System::Drawing::Point(225, 90);
@@ -211,7 +212,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button8->FlatAppearance->BorderSize = 0;
 			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button8->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button8->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button8->ForeColor = System::Drawing::Color::White;
 			this->button8->Location = System::Drawing::Point(159, 90);
@@ -227,7 +228,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button9->FlatAppearance->BorderSize = 0;
 			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button9->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button9->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button9->ForeColor = System::Drawing::Color::White;
 			this->button9->Location = System::Drawing::Point(93, 90);
@@ -243,7 +244,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button10->FlatAppearance->BorderSize = 0;
 			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button10->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button10->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button10->ForeColor = System::Drawing::Color::White;
 			this->button10->Location = System::Drawing::Point(27, 90);
@@ -259,7 +260,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button11->FlatAppearance->BorderSize = 0;
 			this->button11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button11->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button11->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button11->ForeColor = System::Drawing::Color::White;
 			this->button11->Location = System::Drawing::Point(291, 156);
@@ -275,7 +276,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button12->FlatAppearance->BorderSize = 0;
 			this->button12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button12->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button12->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button12->ForeColor = System::Drawing::Color::White;
 			this->button12->Location = System::Drawing::Point(225, 156);
@@ -291,7 +292,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button13->FlatAppearance->BorderSize = 0;
 			this->button13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button13->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button13->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button13->ForeColor = System::Drawing::Color::White;
 			this->button13->Location = System::Drawing::Point(159, 156);
@@ -307,7 +308,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button14->FlatAppearance->BorderSize = 0;
 			this->button14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button14->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button14->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button14->ForeColor = System::Drawing::Color::White;
 			this->button14->Location = System::Drawing::Point(93, 156);
@@ -323,7 +324,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button15->FlatAppearance->BorderSize = 0;
 			this->button15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button15->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button15->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button15->ForeColor = System::Drawing::Color::White;
 			this->button15->Location = System::Drawing::Point(27, 156);
@@ -339,7 +340,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button16->FlatAppearance->BorderSize = 0;
 			this->button16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button16->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button16->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button16->ForeColor = System::Drawing::Color::White;
 			this->button16->Location = System::Drawing::Point(291, 222);
@@ -355,7 +356,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button17->FlatAppearance->BorderSize = 0;
 			this->button17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button17->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button17->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button17->ForeColor = System::Drawing::Color::White;
 			this->button17->Location = System::Drawing::Point(225, 222);
@@ -371,7 +372,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button18->FlatAppearance->BorderSize = 0;
 			this->button18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button18->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button18->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button18->ForeColor = System::Drawing::Color::White;
 			this->button18->Location = System::Drawing::Point(159, 222);
@@ -387,7 +388,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button19->FlatAppearance->BorderSize = 0;
 			this->button19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button19->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button19->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button19->ForeColor = System::Drawing::Color::White;
 			this->button19->Location = System::Drawing::Point(93, 222);
@@ -403,7 +404,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(80)));
 			this->button20->FlatAppearance->BorderSize = 0;
 			this->button20->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button20->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button20->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button20->ForeColor = System::Drawing::Color::White;
 			this->button20->Location = System::Drawing::Point(27, 222);
@@ -445,7 +446,6 @@ namespace ClassLibrary1 {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	
 };
 }

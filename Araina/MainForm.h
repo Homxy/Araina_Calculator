@@ -107,7 +107,7 @@ namespace Araina {
 			this->Select_Num->FlatAppearance->BorderColor = System::Drawing::Color::Gray;
 			this->Select_Num->FlatAppearance->BorderSize = 0;
 			this->Select_Num->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Select_Num->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Select_Num->Font = (gcnew System::Drawing::Font(L"Ebrima", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Select_Num->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -140,7 +140,7 @@ namespace Araina {
 			this->Button_Calculate->FlatAppearance->BorderColor = System::Drawing::Color::Gray;
 			this->Button_Calculate->FlatAppearance->BorderSize = 0;
 			this->Button_Calculate->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Button_Calculate->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Button_Calculate->Font = (gcnew System::Drawing::Font(L"Ebrima", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Button_Calculate->ForeColor = System::Drawing::Color::White;
 			this->Button_Calculate->Location = System::Drawing::Point(227, 0);
@@ -175,7 +175,7 @@ namespace Araina {
 			this->Select_Fx->FlatAppearance->BorderColor = System::Drawing::Color::Gray;
 			this->Select_Fx->FlatAppearance->BorderSize = 0;
 			this->Select_Fx->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Select_Fx->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Select_Fx->Font = (gcnew System::Drawing::Font(L"Ebrima", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Select_Fx->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -194,7 +194,7 @@ namespace Araina {
 			this->Select_Alpha->FlatAppearance->BorderColor = System::Drawing::Color::Gray;
 			this->Select_Alpha->FlatAppearance->BorderSize = 0;
 			this->Select_Alpha->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Select_Alpha->Font = (gcnew System::Drawing::Font(L"PrintAble4U", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Select_Alpha->Font = (gcnew System::Drawing::Font(L"Ebrima", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Select_Alpha->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
@@ -202,7 +202,7 @@ namespace Araina {
 			this->Select_Alpha->Name = L"Select_Alpha";
 			this->Select_Alpha->Size = System::Drawing::Size(60, 50);
 			this->Select_Alpha->TabIndex = 2;
-			this->Select_Alpha->Text = L"A B\r\nX Y\r\n";
+			this->Select_Alpha->Text = L"A B\r\nX Y\r\n\r\n";
 			this->Select_Alpha->UseVisualStyleBackColor = false;
 			this->Select_Alpha->Click += gcnew System::EventHandler(this, &MainForm::Select_Alpha_Click);
 			// 
@@ -239,6 +239,8 @@ namespace Araina {
 			// 
 			this->numPanel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
 				static_cast<System::Int32>(static_cast<System::Byte>(28)));
+			this->numPanel1->Font = (gcnew System::Drawing::Font(L"Ebrima", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->numPanel1->Location = System::Drawing::Point(0, 151);
 			this->numPanel1->Name = L"numPanel1";
 			this->numPanel1->Size = System::Drawing::Size(383, 310);
@@ -251,11 +253,10 @@ namespace Araina {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Ebrima", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->label2->Location = System::Drawing::Point(304, 71);
+			this->label2->Location = System::Drawing::Point(308, 71);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(68, 30);
+			this->label2->Size = System::Drawing::Size(0, 30);
 			this->label2->TabIndex = 9;
-			this->label2->Text = L"label2";
 			// 
 			// MainForm
 			// 
@@ -306,6 +307,7 @@ namespace Araina {
 				i++;
 			}
 		}
+
 		for (int k = c.size(); k > 0; k--) {
 			char op = c[k - 1];
 			if (op == '*') {
@@ -315,6 +317,7 @@ namespace Araina {
 				n.erase(n.begin() + k - 1);
 				c.erase(c.begin() + k - 1);
 				n.push_back(num1 * num2);
+
 			}
 			else if (op == '/') {
 				double num1 = n[k - 1];
@@ -323,9 +326,9 @@ namespace Araina {
 				n.erase(n.begin() + k - 1);
 				c.erase(c.begin() + k - 1);
 				n.push_back(num1 / num2);
-
 			}
 		}
+
 		result = n[0];
 		for (int j = 1; j < n.size(); j++) {
 			if (c[j-1] == '+') {
@@ -334,6 +337,7 @@ namespace Araina {
 			else if (c[j-1] == '-') {
 				result -= n[j];
 			}
+			
 		}
 		
 			
