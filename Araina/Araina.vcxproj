@@ -138,6 +138,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VectorForm.resx">
+      <DependentUpon>VectorForm.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.vcxproj">
