@@ -24,9 +24,15 @@
     <ClCompile Include="numB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VectorForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
