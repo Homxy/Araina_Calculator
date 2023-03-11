@@ -2,6 +2,7 @@
 #include"VectorCalculate.h"
 #include <cmath>
 #include <vector>
+#include <sstream>
 namespace Araina {
 
 	using namespace System;
@@ -454,13 +455,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 }
 void performVectorCalculation() {
 	// create a vector to store the input values
-	std::vector<float> inputValues1;
-	std::vector<float> inputValues2;
+	vector<float> inputValues1;
+	vector<float> inputValues2;
 
-	if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") {
-		MessageBox::Show("Incorrect input!");
-	}
-	else {
+	
 		// retrieve the input values from the textboxes and add them to the vector
 		inputValues1.push_back(System::Convert::ToDouble(textBox1->Text));
 		inputValues1.push_back(System::Convert::ToDouble(textBox2->Text));
@@ -471,15 +469,42 @@ void performVectorCalculation() {
 		inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
 
 		// perform the calculation using the input values
-		float result = dotProduct(inputValues1, inputValues2);
-
+		float resultdot = dotProduct(inputValues1, inputValues2);
+		string resultcross = cross_vector(inputValues1, inputValues2);
 		// display the result in the output label
-		label13->Text = System::Convert::ToString(result);
-	}
+		label15->Text = System::Convert::ToString(resultdot);
+		label13->Text = gcnew System::String(resultcross.c_str());
+
 	
 }
 
+void checkvalid() {
+	double num1, num2, num3;
+	bool isValidInput = true;
+	if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") {
+		isValidInput = false;
+	}
+	if (!Double::TryParse(textBox1->Text, num1)) {
+		isValidInput = false;
+		textBox1->Text = "";
+	}
+	if (!Double::TryParse(textBox2->Text, num2)) {
+		isValidInput = false;
+		textBox2->Text = "";
+	}
+	if (!Double::TryParse(textBox3->Text, num3)) {
+		isValidInput = false;
+		textBox3->Text = "";
+	}
+
+	if (!isValidInput) {
+		MessageBox::Show("Input needs to be numbers!");
+		return;
+	}
+}
+
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	checkvalid();
 	performVectorCalculation();
 }
 private: System::Void VectorForm_Load(System::Object^ sender, System::EventArgs^ e) {
