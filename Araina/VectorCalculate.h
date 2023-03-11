@@ -9,17 +9,17 @@ float dotProduct(vector<float> x, vector<float> y){
 	return sum;
 }
 
-vector<float> cross_vector(vector<float> vec1, vector<float> vec2) {
+vector<double> cross_vector(vector<double> vec1, vector<double> vec2) {
     int dim = vec1.size(); // get dimension of vectors
 
     // check if both vectors have same dimension and it is either 2 or 3
     if (dim != vec2.size() || (dim != 2 && dim != 3)) {
         cout << "Error: Vectors must have the same dimension and it must be 2 or 3." << endl;
-        return vector<float>();
+        return vector<double>();
     }
 
     // calculate cross product
-    vector<float> cross(dim);
+    vector<double> cross(dim);
 
     if (dim == 2) { // 2D cross product
         cross[0] = 0;
@@ -34,26 +34,26 @@ vector<float> cross_vector(vector<float> vec1, vector<float> vec2) {
     return cross;
 }
 
-vector<float> projection_vector(vector<float> v1, vector<float> v2) {
+vector<double> projection_vector(vector<double> v1, vector<double> v2) {
     
     /*proj v->u =   (u dot v) / sizeof v^2 * vector v */
 
     int n = v1.size(); // dimension of vectors
 
     // Compute the dot product of v1 and v2
-    float dot_product = 0;
+    double dot_product = 0;
     for (int i = 0; i < n; i++) {
         dot_product += v1[i] * v2[i];
     }
 
     // Compute the sizeof v^2
-    float mag_v2_squared = 0;
+    double mag_v2_squared = 0;
     for (int i = 0; i < n; i++) {
         mag_v2_squared += v2[i] * v2[i];
     }
 
     // Compute the projection vector
-    vector<float> projection_vector(n);
+    vector<double> projection_vector(n);
     for (int i = 0; i < n; i++) {
         projection_vector[i] = (dot_product / mag_v2_squared) * v2[i];
     }
@@ -61,7 +61,7 @@ vector<float> projection_vector(vector<float> v1, vector<float> v2) {
     return projection_vector;
 }
 
-float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
+double angleBetweenvectors(vector<double> vec1, vector<double> vec2) {
     
     /* angle v->u =   (u dot v) = sizeof u * sizeof v * costheta */
     
@@ -74,25 +74,25 @@ float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
     }
 
     // calculate angle
-    float dot = 0;
+    double dot = 0;
     for (int i = 0; i < dim; i++) {
         dot += vec1[i] * vec2[i];
     }
 
-    float magnitude1 = 0;
+    double magnitude1 = 0;
     for (int i =0 ; i < dim ;i++) {
         magnitude1 += vec1[i] * vec1[i];
     }
     magnitude1 = sqrt(magnitude1);
 
-    float magnitude2 = 0;
+    double magnitude2 = 0;
     for (int j =0 ; j < dim ;j++) {
         magnitude2 += vec2[j] * vec2[j];
     }
     magnitude2 = sqrt(magnitude2);
 
-    float cos_theta = dot / (magnitude1 * magnitude2);
-    float theta = acos(cos_theta);
+    double cos_theta = dot / (magnitude1 * magnitude2);
+    double theta = acos(cos_theta);
 
     return theta;
 }

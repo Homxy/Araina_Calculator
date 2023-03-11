@@ -67,7 +67,7 @@ namespace Araina {
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Label^ label16;
-	private: System::Windows::Forms::Label^ label17;
+
 
 	private:
 		/// <summary>
@@ -107,7 +107,6 @@ namespace Araina {
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -396,17 +395,6 @@ namespace Araina {
 			this->label16->TabIndex = 28;
 			this->label16->Click += gcnew System::EventHandler(this, &VectorForm::label16_Click);
 			// 
-			// label17
-			// 
-			this->label17->AutoSize = true;
-			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label17->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->label17->Location = System::Drawing::Point(71, 149);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(0, 29);
-			this->label17->TabIndex = 29;
-			// 
 			// VectorForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -414,7 +402,6 @@ namespace Araina {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
 				static_cast<System::Int32>(static_cast<System::Byte>(32)));
 			this->ClientSize = System::Drawing::Size(432, 414);
-			this->Controls->Add(this->label17);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label15);
 			this->Controls->Add(this->label14);
@@ -465,25 +452,35 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label15->Text = "";
 	label16->Text = "";
 }
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("Hello, world!");
-	if (textBox1->Text == ""  || textBox2->Text == ""  || textBox3->Text == "") {
-		label17->Text = "Incorrect input";
+void performVectorCalculation() {
+	// create a vector to store the input values
+	std::vector<float> inputValues1;
+	std::vector<float> inputValues2;
+
+	if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") {
+		MessageBox::Show("Incorrect input!");
 	}
-	catch (const invalid_argument& ia) {
-		cerr << "Invalid argument: " << ia.what() << endl;
+	else {
+		// retrieve the input values from the textboxes and add them to the vector
+		inputValues1.push_back(System::Convert::ToDouble(textBox1->Text));
+		inputValues1.push_back(System::Convert::ToDouble(textBox2->Text));
+		inputValues1.push_back(System::Convert::ToDouble(textBox3->Text));
+
+		inputValues2.push_back(System::Convert::ToDouble(textBox4->Text));
+		inputValues2.push_back(System::Convert::ToDouble(textBox5->Text));
+		inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
+
+		// perform the calculation using the input values
+		float result = dotProduct(inputValues1, inputValues2);
+
+		// display the result in the output label
+		label13->Text = System::Convert::ToString(result);
 	}
-	catch (const out_of_range& oor) {
-		cerr << "Out of range: " << oor.what() << endl;
-	}
-	float input1 = Convert::ToDouble(textBox1->Text);
-	float input2 = Convert::ToDouble(textBox2->Text);
-	float input3 = Convert::ToDouble(textBox3->Text);
 	
-	label13->Text = Convert::ToString(input1);
-	label14->Text = Convert::ToString(input2);
-	label15->Text = Convert::ToString(input3);
-	label16->Text = Convert::ToString(input1);
+}
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	performVectorCalculation();
 }
 private: System::Void VectorForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
