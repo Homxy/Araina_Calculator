@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 
 float dotProduct(vector<float> x, vector<float> y){
@@ -11,11 +12,11 @@ float dotProduct(vector<float> x, vector<float> y){
 
 string cross_vector(vector<float> vec1, vector<float> vec2) {
     int dim = vec1.size(); // get dimension of vectors
-
+    string resultcross = "";
     // check if both vectors have same dimension and it is either 2 or 3
     if (dim != vec2.size() || (dim != 2 && dim != 3)) {
         cout << "Error: Vectors must have the same dimension and it must be 2 or 3." << endl;
-        return 0;
+        return resultcross;
     }
 
     // calculate cross product
@@ -24,20 +25,17 @@ string cross_vector(vector<float> vec1, vector<float> vec2) {
     if (dim == 2) { // 2D cross product
         cross[0] = 0;
         cross[1] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
+        resultcross = ':' + to_string(cross[0]) + ", " + to_string(cross[1]);
     }
     else { // 3D cross product
         cross[0] = vec1[1] * vec2[2] - vec1[2] * vec2[1];
         cross[1] = vec1[2] * vec2[0] - vec1[0] * vec2[2];
         cross[2] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
+        resultcross = ':' + to_string(cross[0]) + ", " + to_string(cross[1]) + ", " + to_string(cross[2]);
     }
-    string result = "";
-    if (dim == 2 ) {
-        result = " " + to_string(cross[0]) + ", " + to_string(cross[1]);
-    }
-    else if (dim == 3) {
-        result = " " + to_string(cross[0]) + ", " + to_string(cross[1]) + ", " + to_string(cross[2]);
-    }
-    return result;
+    
+    
+    return resultcross;
 }
 
 vector<float> projection_vector(vector<float> v1, vector<float> v2) {
@@ -100,5 +98,6 @@ float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
     float cos_theta = dot / (magnitude1 * magnitude2);
     float theta = acos(cos_theta);
 
+    theta *= (180 / (22/7));
     return theta;
 }

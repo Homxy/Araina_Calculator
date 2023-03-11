@@ -1,8 +1,9 @@
 #pragma once
-#include"VectorCalculate.h"
+#include "VectorCalculate.h"
 #include <cmath>
 #include <vector>
 #include <sstream>
+#define _CRT_SECURE_NO_WARNINGS
 namespace Araina {
 
 	using namespace System;
@@ -471,11 +472,11 @@ void performVectorCalculation() {
 		// perform the calculation using the input values
 		string resultcross = cross_vector(inputValues1, inputValues2);
 		float resultdot = dotProduct(inputValues1, inputValues2);
-		float angle = angleBetweenvectors(inputValues1, inputValues2);
+		float theta = angleBetweenvectors(inputValues1, inputValues2);
 		// display the result in the output label
 		label13->Text = gcnew System::String(resultcross.c_str());
 		label15->Text = System::Convert::ToString(resultdot);
-		label16->Text = System::Convert::ToString(angle);
+		label16->Text = System::Convert::ToString(theta);
 
 
 	
@@ -488,7 +489,7 @@ void checkvalid() {
 		isValidInput = false;
 	}
 	if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") {
-		isValidInput = false;
+		MessageBox::Show("Input needs to be numbers!");
 	}
 	if (!Double::TryParse(textBox1->Text, num1)) {
 		isValidInput = false;
