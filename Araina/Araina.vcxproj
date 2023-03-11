@@ -130,7 +130,6 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="VectorCalculate.h" />
     <ClInclude Include="VectorForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

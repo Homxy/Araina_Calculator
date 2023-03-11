@@ -453,9 +453,47 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label16->Text = "";
 }
 
+private: float dotProduct(vector<float>& x, vector<float>& y) {
+	int sum = 0;
+	for (unsigned int i = 0; i < x.size(); i++) sum += (x.at(i) * y.at(i));
+	return sum;
+}
 
+private: bool isNumber(System::String^ text) {
+		   double result;
+		   return System::Double::TryParse(text, result);
+}
+private: void checkvalid() {
+	if (!isNumber(textBox1->Text) ||
+		!isNumber(textBox2->Text) ||
+		!isNumber(textBox3->Text) ||
+		!isNumber(textBox4->Text) ||
+		!isNumber(textBox5->Text) ||
+		!isNumber(textBox6->Text)) {
+		MessageBox::Show("Input needs to be a number!");
+	}
+	else {
+		calvec();
+	}
+}
+private: void calvec() {
+	vector<float> inputValues1;
+	vector<float> inputValues2;
+
+	inputValues1.push_back(System::Convert::ToDouble(textBox1->Text));
+	inputValues1.push_back(System::Convert::ToDouble(textBox2->Text));
+	inputValues1.push_back(System::Convert::ToDouble(textBox3->Text));
+
+	inputValues2.push_back(System::Convert::ToDouble(textBox4->Text));
+	inputValues2.push_back(System::Convert::ToDouble(textBox5->Text));
+	inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
+
+	float dotresult = dotProduct(inputValues1, inputValues2);
+	label15->Text = System::Convert::ToString(dotresult);
+
+}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+	checkvalid();
 }
 private: System::Void VectorForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }

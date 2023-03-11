@@ -1,7 +1,6 @@
 #pragma once
 #include "NumPanel.h"
 #include "../Araina/VectorForm.h"
-
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
