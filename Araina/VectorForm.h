@@ -1,9 +1,8 @@
 #pragma once
-#include "VectorCalculate.h"
 #include <cmath>
 #include <vector>
-#include <sstream>
 #define _CRT_SECURE_NO_WARNINGS
+
 namespace Araina {
 
 	using namespace System;
@@ -438,7 +437,6 @@ namespace Araina {
 
 		}
 #pragma endregion
-	
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 }
@@ -454,66 +452,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label15->Text = "";
 	label16->Text = "";
 }
-void performVectorCalculation() {
-	// create a vector to store the input values
-	vector<float> inputValues1;
-	vector<float> inputValues2;
 
-	
-		// retrieve the input values from the textboxes and add them to the vector
-		inputValues1.push_back(System::Convert::ToDouble(textBox1->Text));
-		inputValues1.push_back(System::Convert::ToDouble(textBox2->Text));
-		inputValues1.push_back(System::Convert::ToDouble(textBox3->Text));
-
-		inputValues2.push_back(System::Convert::ToDouble(textBox4->Text));
-		inputValues2.push_back(System::Convert::ToDouble(textBox5->Text));
-		inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
-
-		// perform the calculation using the input values
-		string resultcross = cross_vector(inputValues1, inputValues2);
-		float resultdot = dotProduct(inputValues1, inputValues2);
-		float theta = angleBetweenvectors(inputValues1, inputValues2);
-		// display the result in the output label
-		label13->Text = gcnew System::String(resultcross.c_str());
-		label15->Text = System::Convert::ToString(resultdot);
-		label16->Text = System::Convert::ToString(theta);
-
-
-	
-}
-
-void checkvalid() {
-	double num1, num2, num3;
-	bool isValidInput = true;
-	if (!System::Convert::ToDouble(textBox1->Text)) {
-		isValidInput = false;
-	}
-	if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") {
-		MessageBox::Show("Input needs to be numbers!");
-	}
-	if (!Double::TryParse(textBox1->Text, num1)) {
-		isValidInput = false;
-		textBox1->Text = "";
-	}
-	if (!Double::TryParse(textBox2->Text, num2)) {
-		isValidInput = false;
-		textBox2->Text = "";
-	}
-	if (!Double::TryParse(textBox3->Text, num3)) {
-		isValidInput = false;
-		textBox3->Text = "";
-	}
-
-	if (!isValidInput) {
-		MessageBox::Show("Input needs to be numbers!");
-		return;
-	}
-	
-}
 
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	checkvalid();
-	performVectorCalculation();
+	
 }
 private: System::Void VectorForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }

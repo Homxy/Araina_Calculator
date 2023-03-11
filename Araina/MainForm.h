@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <vector>
+#define _CRT_SECURE_NO_WARNINGS
 namespace Araina {
 
 	using namespace System;

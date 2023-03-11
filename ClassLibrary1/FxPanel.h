@@ -37,8 +37,8 @@ namespace ClassLibrary1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
 	protected:
+	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
@@ -58,7 +58,8 @@ namespace ClassLibrary1 {
 	private: System::Windows::Forms::Button^ button18;
 	private: System::Windows::Forms::Button^ button19;
 	private: System::Windows::Forms::Button^ button20;
-	private: Araina::VectorForm^ VectorForm;
+	
+
 
 
 	private:
@@ -74,7 +75,6 @@ namespace ClassLibrary1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->VectorForm = (gcnew Araina::VectorForm());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -475,11 +475,11 @@ namespace ClassLibrary1 {
 #pragma endregion
 	
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	VectorForm->ShowDialog();
+	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
+	VecForm->ShowDialog();
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void VectorForm_Load(System::Object^ sender, System::EventArgs^ e) {
-}
+
 };
 }

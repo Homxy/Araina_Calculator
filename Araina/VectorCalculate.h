@@ -4,15 +4,15 @@
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 
-float dotProduct(vector<float> x, vector<float> y){
+float dotProduct(vector<float> &x, vector<float> &y){
 	int sum = 0;
 	for(unsigned int i = 0; i < x.size() ; i++) sum += (x.at(i)*y.at(i));	
 	return sum;
 }
 
-string cross_vector(vector<float> vec1, vector<float> vec2) {
+string cross_vector(vector<float> &vec1, vector<float> &vec2) {
     int dim = vec1.size(); // get dimension of vectors
-    string resultcross = "";
+    string resultcross = "ww";
     // check if both vectors have same dimension and it is either 2 or 3
     if (dim != vec2.size() || (dim != 2 && dim != 3)) {
         cout << "Error: Vectors must have the same dimension and it must be 2 or 3." << endl;
@@ -25,20 +25,18 @@ string cross_vector(vector<float> vec1, vector<float> vec2) {
     if (dim == 2) { // 2D cross product
         cross[0] = 0;
         cross[1] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
-        resultcross = ':' + to_string(cross[0]) + ", " + to_string(cross[1]);
     }
     else { // 3D cross product
         cross[0] = vec1[1] * vec2[2] - vec1[2] * vec2[1];
         cross[1] = vec1[2] * vec2[0] - vec1[0] * vec2[2];
         cross[2] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
-        resultcross = ':' + to_string(cross[0]) + ", " + to_string(cross[1]) + ", " + to_string(cross[2]);
     }
     
     
     return resultcross;
 }
 
-vector<float> projection_vector(vector<float> v1, vector<float> v2) {
+vector<float> projection_vector(vector<float> &v1, vector<float> &v2) {
     
     /*proj v->u =   (u dot v) / sizeof v^2 * vector v */
 
@@ -65,7 +63,7 @@ vector<float> projection_vector(vector<float> v1, vector<float> v2) {
     return projection_vector;
 }
 
-float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
+float angleBetweenvectors(vector<float> &vec1, vector<float> &vec2) {
     
     /* angle v->u =   (u dot v) = sizeof u * sizeof v * costheta */
     
@@ -74,7 +72,7 @@ float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
     // check if both vectors have same dimension and it is either 2 or 3
     if (dim != vec2.size() || (dim != 2 && dim != 3)) {
         cerr << "Error: Vectors must have the same dimension and it must be 2 or 3." << endl;
-        return -1;
+        return 0;
     }
 
     // calculate angle
@@ -97,7 +95,7 @@ float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
 
     float cos_theta = dot / (magnitude1 * magnitude2);
     float theta = acos(cos_theta);
-
-    theta *= (180 / (22/7));
-    return theta;
+    float ans = theta * (180.00 / (22.00 / 7.00));
+    
+    return ans;
 }
