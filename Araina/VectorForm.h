@@ -469,11 +469,14 @@ void performVectorCalculation() {
 		inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
 
 		// perform the calculation using the input values
-		float resultdot = dotProduct(inputValues1, inputValues2);
 		string resultcross = cross_vector(inputValues1, inputValues2);
+		float resultdot = dotProduct(inputValues1, inputValues2);
+		float angle = angleBetweenvectors(inputValues1, inputValues2);
 		// display the result in the output label
-		label15->Text = System::Convert::ToString(resultdot);
 		label13->Text = gcnew System::String(resultcross.c_str());
+		label15->Text = System::Convert::ToString(resultdot);
+		label16->Text = System::Convert::ToString(angle);
+
 
 	
 }
@@ -481,6 +484,9 @@ void performVectorCalculation() {
 void checkvalid() {
 	double num1, num2, num3;
 	bool isValidInput = true;
+	if (!System::Convert::ToDouble(textBox1->Text)) {
+		isValidInput = false;
+	}
 	if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") {
 		isValidInput = false;
 	}
@@ -501,6 +507,7 @@ void checkvalid() {
 		MessageBox::Show("Input needs to be numbers!");
 		return;
 	}
+	
 }
 
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {

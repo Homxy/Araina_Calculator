@@ -35,5 +35,8 @@
     <ClInclude Include="VectorForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VectorCalculate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

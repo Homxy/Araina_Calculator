@@ -15,7 +15,7 @@ string cross_vector(vector<float> vec1, vector<float> vec2) {
     // check if both vectors have same dimension and it is either 2 or 3
     if (dim != vec2.size() || (dim != 2 && dim != 3)) {
         cout << "Error: Vectors must have the same dimension and it must be 2 or 3." << endl;
-        return "Error";
+        return 0;
     }
 
     // calculate cross product
@@ -30,8 +30,13 @@ string cross_vector(vector<float> vec1, vector<float> vec2) {
         cross[1] = vec1[2] * vec2[0] - vec1[0] * vec2[2];
         cross[2] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
     }
-    string result = to_string(cross[0]) + ", " + to_string(cross[1]) + ", " + to_string(cross[2]);
-    
+    string result = "";
+    if (dim == 2 ) {
+        result = " " + to_string(cross[0]) + ", " + to_string(cross[1]);
+    }
+    else if (dim == 3) {
+        result = " " + to_string(cross[0]) + ", " + to_string(cross[1]) + ", " + to_string(cross[2]);
+    }
     return result;
 }
 
