@@ -71,6 +71,10 @@ namespace Araina {
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::Windows::Forms::Label^ label21;
 
 
 	private:
@@ -112,13 +116,17 @@ namespace Araina {
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(88)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
 				static_cast<System::Int32>(static_cast<System::Byte>(88)));
-			this->button1->Location = System::Drawing::Point(150, 120);
+			this->button1->Location = System::Drawing::Point(150, 117);
 			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(180, 39);
@@ -131,10 +139,10 @@ namespace Araina {
 			// 
 			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(88)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
 				static_cast<System::Int32>(static_cast<System::Byte>(88)));
-			this->button2->Location = System::Drawing::Point(383, 251);
+			this->button2->Location = System::Drawing::Point(388, 117);
 			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(68, 29);
+			this->button2->Size = System::Drawing::Size(58, 39);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Clear";
 			this->button2->UseVisualStyleBackColor = false;
@@ -144,10 +152,10 @@ namespace Araina {
 			// 
 			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(88)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
 				static_cast<System::Int32>(static_cast<System::Byte>(88)));
-			this->button3->Location = System::Drawing::Point(383, 295);
+			this->button3->Location = System::Drawing::Point(367, 256);
 			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(68, 30);
+			this->button3->Size = System::Drawing::Size(81, 46);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Back";
 			this->button3->UseVisualStyleBackColor = false;
@@ -323,7 +331,7 @@ namespace Araina {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label9->ForeColor = System::Drawing::SystemColors::Control;
-			this->label9->Location = System::Drawing::Point(8, 258);
+			this->label9->Location = System::Drawing::Point(8, 252);
 			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(118, 24);
@@ -365,7 +373,7 @@ namespace Araina {
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label12->ForeColor = System::Drawing::SystemColors::Control;
-			this->label12->Location = System::Drawing::Point(8, 210);
+			this->label12->Location = System::Drawing::Point(8, 211);
 			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(175, 20);
@@ -376,52 +384,52 @@ namespace Araina {
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label13->ForeColor = System::Drawing::SystemColors::Control;
-			this->label13->Location = System::Drawing::Point(198, 174);
+			this->label13->Location = System::Drawing::Point(198, 172);
 			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(0, 18);
+			this->label13->Size = System::Drawing::Size(0, 20);
 			this->label13->TabIndex = 25;
 			this->label13->Click += gcnew System::EventHandler(this, &VectorForm::label13_Click);
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label14->ForeColor = System::Drawing::SystemColors::Control;
-			this->label14->Location = System::Drawing::Point(198, 213);
+			this->label14->Location = System::Drawing::Point(198, 212);
 			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(0, 18);
+			this->label14->Size = System::Drawing::Size(0, 20);
 			this->label14->TabIndex = 26;
 			this->label14->Click += gcnew System::EventHandler(this, &VectorForm::label14_Click);
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label15->ForeColor = System::Drawing::SystemColors::Control;
-			this->label15->Location = System::Drawing::Point(147, 260);
+			this->label15->Location = System::Drawing::Point(148, 251);
 			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(0, 18);
+			this->label15->Size = System::Drawing::Size(0, 24);
 			this->label15->TabIndex = 27;
 			this->label15->Click += gcnew System::EventHandler(this, &VectorForm::label15_Click);
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label16->ForeColor = System::Drawing::SystemColors::Control;
-			this->label16->Location = System::Drawing::Point(225, 300);
+			this->label16->Location = System::Drawing::Point(226, 294);
 			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(0, 18);
+			this->label16->Size = System::Drawing::Size(0, 24);
 			this->label16->TabIndex = 28;
 			this->label16->Click += gcnew System::EventHandler(this, &VectorForm::label16_Click);
 			// 
@@ -431,12 +439,62 @@ namespace Araina {
 			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label17->ForeColor = System::Drawing::SystemColors::Control;
-			this->label17->Location = System::Drawing::Point(294, 289);
+			this->label17->Location = System::Drawing::Point(312, 286);
 			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(20, 25);
 			this->label17->TabIndex = 29;
 			this->label17->Text = L"°";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label18->ForeColor = System::Drawing::SystemColors::Control;
+			this->label18->Location = System::Drawing::Point(11, 339);
+			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(94, 25);
+			this->label18->TabIndex = 30;
+			this->label18->Text = L"V1 + V2:";
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label19->ForeColor = System::Drawing::SystemColors::Control;
+			this->label19->Location = System::Drawing::Point(11, 382);
+			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(89, 25);
+			this->label19->TabIndex = 31;
+			this->label19->Text = L"V1 - V2:";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label20->ForeColor = System::Drawing::SystemColors::Control;
+			this->label20->Location = System::Drawing::Point(129, 341);
+			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(0, 24);
+			this->label20->TabIndex = 32;
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label21->ForeColor = System::Drawing::SystemColors::Control;
+			this->label21->Location = System::Drawing::Point(129, 384);
+			this->label21->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(0, 24);
+			this->label21->TabIndex = 33;
 			// 
 			// VectorForm
 			// 
@@ -444,7 +502,11 @@ namespace Araina {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
 				static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->ClientSize = System::Drawing::Size(462, 336);
+			this->ClientSize = System::Drawing::Size(462, 430);
+			this->Controls->Add(this->label21);
+			this->Controls->Add(this->label20);
+			this->Controls->Add(this->label19);
+			this->Controls->Add(this->label18);
 			this->Controls->Add(this->label17);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label15);
@@ -493,12 +555,14 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label14->Text = "";
 	label15->Text = "";
 	label16->Text = "";
+	label20->Text = "";
+	label21->Text = "";
 	label17->Hide();
 }
 
-public: float dotProduct(vector<float>& x, vector<float>& y) {
+public: float dotProduct(vector<float>& vec1, vector<float>& vec2) {
 	float sum = 0;
-	for (unsigned int i = 0; i < x.size(); i++) sum += (x.at(i) * y.at(i));
+	for (unsigned int i = 0; i < vec1.size(); i++) sum += (vec1.at(i) * vec2.at(i));
 	return sum;
 }
 
@@ -529,26 +593,26 @@ public: string crossProduct(vector<float>& vec1, vector<float>& vec2) {
 	return resultcross;
 }
 
-public: string projectionvector(vector<float> v1, vector<float> v2) {
+public: string projectionvector(vector<float> vec1, vector<float> vec2) {
 
 	/*proj v->u =   (u dot v) / sizeof v^2 * vector v */
 	string projecresult = "";
-	int n = v1.size(); // dimension of vectors
+	int dim = vec1.size(); // dimension of vectors
 
 	// Compute the dot product of v1 and v2
-	float dot = dotProduct(v1,v2);
+	float dot = dotProduct(vec1,vec2);
 
 	// Compute the sizeof v^2
 	float magsquared = 0;
-	for (int i = 0; i < n; i++) {
-	   magsquared += (v2.at(i) * v2.at(i));
+	for (int i = 0; i < dim; i++) {
+	   magsquared += (vec2.at(i) * vec2.at(i));
 	}
 	// Compute the projection vector
-	vector<float> projecvector(n);
-	for (int i = 0; i < n; i++) {
-	   projecvector[i] = (dot / magsquared) * v2[i];
+	vector<float> projecvector(dim);
+	for (int i = 0; i < dim; i++) {
+	   projecvector[i] = (dot / magsquared) * vec2[i];
 	}
-	if (n == 2) { projecresult = std::to_string(projecvector[0]) + ", " + std::to_string(projecvector[1]); }
+	if (dim == 2) { projecresult = std::to_string(projecvector[0]) + ", " + std::to_string(projecvector[1]); }
 	else { projecresult = std::to_string(projecvector[0]) + ", " + std::to_string(projecvector[1]) + ", " + std::to_string(projecvector[2]); }
 	return projecresult;
 }
@@ -579,6 +643,32 @@ public: float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
 	float theta = acos(cos_theta);
 	theta *= 180 / (3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679);
 	return theta;
+}
+
+public: string plusvec(vector<float> vec1, vector<float> vec2) {
+	int dim = vec1.size();
+	vector<float> plusvec(dim);
+	for (int i = 0; i < dim; i++) {
+		plusvec[i] += vec1[i] + vec2[i];
+	}
+	string resultplus = "";
+	if (dim == 2) { resultplus = std::to_string(plusvec[0]) + ", " + std::to_string(plusvec[1]); }
+	else { resultplus = std::to_string(plusvec[0]) + ", " + std::to_string(plusvec[1]) + ", " + std::to_string(plusvec[2]); }
+	
+	return resultplus;
+}
+
+public: string minusvec(vector<float> vec1, vector<float> vec2) {
+	int dim = vec1.size();
+	vector<float> minusvec(dim);
+	for (int i = 0; i < dim; i++) {
+		minusvec[i] += vec1[i] - vec2[i];
+	}
+	string resultminus = "";
+	if (dim == 2) { resultminus = std::to_string(minusvec[0]) + ", " + std::to_string(minusvec[1]); }
+	else { resultminus = std::to_string(minusvec[0]) + ", " + std::to_string(minusvec[1]) + ", " + std::to_string(minusvec[2]); }
+
+	return resultminus;
 }
 
 public: bool isNumber(System::String^ text) {
@@ -651,14 +741,16 @@ public: void calvec() {
 	string projectionresult = projectionvector(inputValues2, inputValues1);
 	float dotresult = dotProduct(inputValues1, inputValues2);
 	float angleresult = angleBetweenvectors(inputValues1, inputValues2);
-
+	string plusvecresult = plusvec(inputValues1, inputValues2);
+	string minusvecresult = minusvec(inputValues1, inputValues2);
 
 	label13->Text = gcnew System::String(crossresult.c_str());			//cross
 	label14->Text = gcnew System::String(projectionresult.c_str());		//proj
 	label15->Text = System::Convert::ToString(dotresult);				//dot
 	label16->Text = System::Convert::ToString(angleresult);				//angle
 	label17->Show();													//degree symbol
-
+	label20->Text = gcnew System::String(plusvecresult.c_str());		//V1+V2
+	label21->Text = gcnew System::String(minusvecresult.c_str());		//V1-V2
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	checkvalid();
