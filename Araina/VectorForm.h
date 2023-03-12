@@ -1,6 +1,8 @@
 #pragma once
 #include <cmath>
 #include <vector>
+#include <string>
+#include <iomanip>
 #define _CRT_SECURE_NO_WARNINGS
 
 namespace Araina {
@@ -114,9 +116,9 @@ namespace Araina {
 			// 
 			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(88)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
 				static_cast<System::Int32>(static_cast<System::Byte>(88)));
-			this->button1->Location = System::Drawing::Point(270, 143);
+			this->button1->Location = System::Drawing::Point(369, 143);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(144, 48);
+			this->button1->Size = System::Drawing::Size(176, 48);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Enter";
 			this->button1->UseVisualStyleBackColor = false;
@@ -126,9 +128,9 @@ namespace Araina {
 			// 
 			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(88)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
 				static_cast<System::Int32>(static_cast<System::Byte>(88)));
-			this->button2->Location = System::Drawing::Point(360, 310);
+			this->button2->Location = System::Drawing::Point(459, 310);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(58, 36);
+			this->button2->Size = System::Drawing::Size(90, 36);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Clear";
 			this->button2->UseVisualStyleBackColor = false;
@@ -138,9 +140,9 @@ namespace Araina {
 			// 
 			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(88)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
 				static_cast<System::Int32>(static_cast<System::Byte>(88)));
-			this->button3->Location = System::Drawing::Point(360, 365);
+			this->button3->Location = System::Drawing::Point(459, 365);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(58, 37);
+			this->button3->Size = System::Drawing::Size(90, 37);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Back";
 			this->button3->UseVisualStyleBackColor = false;
@@ -302,7 +304,7 @@ namespace Araina {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label9->ForeColor = System::Drawing::SystemColors::Control;
-			this->label9->Location = System::Drawing::Point(12, 317);
+			this->label9->Location = System::Drawing::Point(11, 317);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(151, 29);
 			this->label9->TabIndex = 17;
@@ -315,7 +317,7 @@ namespace Araina {
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label10->ForeColor = System::Drawing::SystemColors::Control;
-			this->label10->Location = System::Drawing::Point(12, 365);
+			this->label10->Location = System::Drawing::Point(11, 365);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(227, 25);
 			this->label10->TabIndex = 18;
@@ -328,7 +330,7 @@ namespace Araina {
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label11->ForeColor = System::Drawing::SystemColors::Control;
-			this->label11->Location = System::Drawing::Point(12, 209);
+			this->label11->Location = System::Drawing::Point(11, 209);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(177, 29);
 			this->label11->TabIndex = 19;
@@ -341,7 +343,7 @@ namespace Araina {
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->label12->ForeColor = System::Drawing::SystemColors::Control;
-			this->label12->Location = System::Drawing::Point(12, 258);
+			this->label12->Location = System::Drawing::Point(11, 258);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(209, 29);
 			this->label12->TabIndex = 20;
@@ -402,7 +404,7 @@ namespace Araina {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
 				static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->ClientSize = System::Drawing::Size(432, 414);
+			this->ClientSize = System::Drawing::Size(571, 414);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label15);
 			this->Controls->Add(this->label14);
@@ -454,26 +456,65 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 }
 
 private: float dotProduct(vector<float>& x, vector<float>& y) {
-	int sum = 0;
+	float sum = 0;
 	for (unsigned int i = 0; i < x.size(); i++) sum += (x.at(i) * y.at(i));
 	return sum;
 }
+
+private: string crossProduct(vector<float>& vec1, vector<float>& vec2) {
+	int dim = vec1.size(); // get dimension of vectors
+	string resultcross = "ww";
+	// check if both vectors have same dimension and it is either 2 or 3
+	if (dim != vec2.size() || (dim != 2 && dim != 3)) {
+		return resultcross;
+	}
+
+	// calculate cross product
+	vector<float> cross(dim);
+	
+	if (dim == 2) { // 2D cross product
+		cross[0] = 0;
+		cross[1] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
+		resultcross = std::to_string(cross[0]) + ", " + std::to_string(cross[1]);
+	}
+	else { // 3D cross product
+		cross[0] = vec1[1] * vec2[2] - vec1[2] * vec2[1];
+		cross[1] = vec1[2] * vec2[0] - vec1[0] * vec2[2];
+		cross[2] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
+		resultcross = std::to_string(cross[0]) + ", " + std::to_string(cross[1]) + ", " + std::to_string(cross[2]);
+	}
+
+
+	return resultcross;
+}
+
+
 
 private: bool isNumber(System::String^ text) {
 		   double result;
 		   return System::Double::TryParse(text, result);
 }
-private: void checkvalid() {
-	if (!isNumber(textBox1->Text) ||
-		!isNumber(textBox2->Text) ||
-		!isNumber(textBox3->Text) ||
-		!isNumber(textBox4->Text) ||
-		!isNumber(textBox5->Text) ||
-		!isNumber(textBox6->Text)) {
-		MessageBox::Show("Input needs to be a number!");
+public: void checkvalid() {
+	int count = 0;
+	if (isNumber(textBox1->Text)) count++; 
+	if (isNumber(textBox2->Text)) count++; 
+	if (isNumber(textBox3->Text)) count++; 
+	if (isNumber(textBox4->Text)) count++; 
+	if (isNumber(textBox5->Text)) count++; 
+	if (isNumber(textBox6->Text)) count++; 
+
+	if (count < 4) {
+		MessageBox::Show("Too less information!"); 
+		
+	}
+	else if (count == 4 || count == 6) {
+		calvec();
+	}
+	else if (count == 5) {
+		MessageBox::Show("2D cant calculate with 3D Vector!");
 	}
 	else {
-		calvec();
+		MessageBox::Show("Input needs to be a number!");
 	}
 }
 private: void calvec() {
@@ -482,14 +523,21 @@ private: void calvec() {
 
 	inputValues1.push_back(System::Convert::ToDouble(textBox1->Text));
 	inputValues1.push_back(System::Convert::ToDouble(textBox2->Text));
-	inputValues1.push_back(System::Convert::ToDouble(textBox3->Text));
+	if (isNumber(textBox3->Text)) {
+		inputValues1.push_back(System::Convert::ToDouble(textBox3->Text));
+	}
+	
 
 	inputValues2.push_back(System::Convert::ToDouble(textBox4->Text));
 	inputValues2.push_back(System::Convert::ToDouble(textBox5->Text));
-	inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
+	if (isNumber(textBox6->Text)) {
+		inputValues2.push_back(System::Convert::ToDouble(textBox6->Text));
+	}
 
 	float dotresult = dotProduct(inputValues1, inputValues2);
+	string crossresult = crossProduct(inputValues1, inputValues2);
 	label15->Text = System::Convert::ToString(dotresult);
+	label13->Text = gcnew System::String(crossresult.c_str());
 
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {

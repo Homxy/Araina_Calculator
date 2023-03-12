@@ -124,7 +124,6 @@
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="MyUserControl.cpp" />
     <ClCompile Include="numB.cpp" />
-    <ClCompile Include="VectorForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
