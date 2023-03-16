@@ -351,6 +351,7 @@ namespace Araina {
 	public: void eval(String^ textin) {
 		double result = 0;
 		int j = 0;
+		int start = 0;
 		char op = '+';
 		String^ ftext = "";
 		double num = 0;
@@ -381,8 +382,8 @@ namespace Araina {
 					// handle error: unbalanced parentheses
 					return;
 				}
-				int start = parens.top();
-				parens.pop();
+				int start = parens.back();
+				parens.pop_back();
 				int end = n.size() - 1;
 				double inner_result = evaluate_expression(n, c, start, end);
 				n.erase(n.begin() + start, n.end());
@@ -402,7 +403,9 @@ namespace Araina {
 			// handle error: unbalanced parentheses
 			return;
 		}
-		result = evaluate_expression(n, c, 0, n.size() - 1);
+
+
+		result = evaluate_expression(n, c, 0, n.size()-1);
 		label2->Text = Convert::ToString(result);
 	}
 
@@ -455,7 +458,7 @@ namespace Araina {
 				  }
 			  }
 			  return result;
-		  }
+		}
 
 	public:	double power(double base, double exponent) {
 			if (exponent == 0) {
