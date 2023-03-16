@@ -693,6 +693,7 @@ public: void checkvalid() {
 	if (isNumber(textBox5->Text)) count++; 
 	if (isNumber(textBox6->Text)) count++; 
 	if (count < 4) {
+		setzero();
 		MessageBox::Show("Too less information!"); 
 		
 	}
