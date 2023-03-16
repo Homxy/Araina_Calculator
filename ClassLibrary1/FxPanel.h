@@ -478,10 +478,12 @@ namespace ClassLibrary1 {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FxPanel";
 			this->Size = System::Drawing::Size(511, 382);
+			this->Load += gcnew System::EventHandler(this, &FxPanel::FxPanel_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+
 	
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -535,5 +537,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		ValueChanged(this, EventArgs::Empty);
 	}
-	};
+	private: System::Void FxPanel_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
     }
