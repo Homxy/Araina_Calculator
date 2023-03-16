@@ -560,13 +560,13 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label17->Hide();
 }
 
-public: float dotProduct(vector<float>& vec1, vector<float>& vec2) {
+private: float dotProduct(vector<float>& vec1, vector<float>& vec2) {
 	float sum = 0;
 	for (unsigned int i = 0; i < vec1.size(); i++) sum += (vec1.at(i) * vec2.at(i));
 	return sum;
 }
 
-public: string crossProduct(vector<float>& vec1, vector<float>& vec2) {
+private: string crossProduct(vector<float>& vec1, vector<float>& vec2) {
 	int dim = vec1.size(); // get dimension of vectors
 	string resultcross = "0";
 	// check if both vectors have same dimension and it is either 2 or 3
@@ -593,7 +593,7 @@ public: string crossProduct(vector<float>& vec1, vector<float>& vec2) {
 	return resultcross;
 }
 
-public: string projectionvector(vector<float> vec1, vector<float> vec2) {
+private: string projectionvector(vector<float> vec1, vector<float> vec2) {
 
 	/*proj v->u =   (u dot v) / sizeof v^2 * vector v */
 	string projecresult = "";
@@ -617,7 +617,7 @@ public: string projectionvector(vector<float> vec1, vector<float> vec2) {
 	return projecresult;
 }
 
-public: float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
+private: float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
 
 	/* angle v->u =   (u dot v) = sizeof u * sizeof v * costheta */
 
@@ -645,7 +645,7 @@ public: float angleBetweenvectors(vector<float> vec1, vector<float> vec2) {
 	return theta;
 }
 
-public: string plusvec(vector<float> vec1, vector<float> vec2) {
+private: string plusvec(vector<float> vec1, vector<float> vec2) {
 	int dim = vec1.size();
 	vector<float> plusvec(dim);
 	for (int i = 0; i < dim; i++) {
@@ -658,7 +658,7 @@ public: string plusvec(vector<float> vec1, vector<float> vec2) {
 	return resultplus;
 }
 
-public: string minusvec(vector<float> vec1, vector<float> vec2) {
+private: string minusvec(vector<float> vec1, vector<float> vec2) {
 	int dim = vec1.size();
 	vector<float> minusvec(dim);
 	for (int i = 0; i < dim; i++) {
@@ -671,12 +671,12 @@ public: string minusvec(vector<float> vec1, vector<float> vec2) {
 	return resultminus;
 }
 
-public: bool isNumber(System::String^ text) {
+private: bool isNumber(System::String^ text) {
 		   double result;
 		   return System::Double::TryParse(text, result);
 }
 
-public: void setzero() {
+private: void setzero() {
 	if (!isNumber(textBox1->Text)) textBox1->Text = "0";
 	if (!isNumber(textBox2->Text)) textBox2->Text = "0";
 	if (!isNumber(textBox3->Text)) textBox3->Text = "0";
@@ -684,7 +684,7 @@ public: void setzero() {
 	if (!isNumber(textBox5->Text)) textBox5->Text = "0";
 	if (!isNumber(textBox6->Text)) textBox6->Text = "0";
 }
-public: void checkvalid() {
+private: void checkvalid() {
 	int count = 0;
 	if (isNumber(textBox1->Text)) count++; 
 	if (isNumber(textBox2->Text)) count++; 
@@ -704,6 +704,8 @@ public: void checkvalid() {
 		}
 		else if (isNumber(textBox1->Text) && isNumber(textBox2->Text) 
 			&& isNumber(textBox4->Text) && isNumber(textBox5->Text) ) {
+			textBox3->Text = "";
+			textBox6->Text = "";
 			calvec();
 		}
 		else {
@@ -721,7 +723,7 @@ public: void checkvalid() {
 		MessageBox::Show("Input needs to be a number!");
 	}
 }
-public: void calvec() {
+private: void calvec() {
 	vector<float> inputValues1;
 	vector<float> inputValues2;
 
