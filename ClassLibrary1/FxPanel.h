@@ -53,6 +53,8 @@ namespace ClassLibrary1 {
 	private: System::Windows::Forms::Button^ button14;
 	private: System::Windows::Forms::Button^ button15;
 	private: System::Windows::Forms::Button^ button16;
+
+
 	private: System::Windows::Forms::Button^ button17;
 	private: System::Windows::Forms::Button^ button18;
 	private: System::Windows::Forms::Button^ button19;
@@ -105,10 +107,9 @@ namespace ClassLibrary1 {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(36, 30);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(27, 24);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(80, 74);
+			this->button1->Size = System::Drawing::Size(60, 60);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"x²";
 			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
@@ -124,12 +125,11 @@ namespace ClassLibrary1 {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(124, 30);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(93, 24);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(80, 74);
+			this->button2->Size = System::Drawing::Size(60, 60);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"Vec tor";
+			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &FxPanel::button2_Click);
 			// 
@@ -142,10 +142,9 @@ namespace ClassLibrary1 {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(212, 30);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Location = System::Drawing::Point(159, 24);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(80, 74);
+			this->button3->Size = System::Drawing::Size(60, 60);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"button3";
 			this->button3->UseVisualStyleBackColor = false;
@@ -159,10 +158,9 @@ namespace ClassLibrary1 {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(300, 30);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Location = System::Drawing::Point(225, 24);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(80, 74);
+			this->button4->Size = System::Drawing::Size(60, 60);
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"button4";
 			this->button4->UseVisualStyleBackColor = false;
@@ -176,10 +174,9 @@ namespace ClassLibrary1 {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(388, 30);
-			this->button5->Margin = System::Windows::Forms::Padding(4);
+			this->button5->Location = System::Drawing::Point(291, 24);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(80, 74);
+			this->button5->Size = System::Drawing::Size(60, 60);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"button5";
 			this->button5->UseVisualStyleBackColor = false;
@@ -193,10 +190,9 @@ namespace ClassLibrary1 {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button6->ForeColor = System::Drawing::Color::White;
-			this->button6->Location = System::Drawing::Point(388, 111);
-			this->button6->Margin = System::Windows::Forms::Padding(4);
+			this->button6->Location = System::Drawing::Point(291, 90);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(80, 74);
+			this->button6->Size = System::Drawing::Size(60, 60);
 			this->button6->TabIndex = 9;
 			this->button6->Text = L"button6";
 			this->button6->UseVisualStyleBackColor = false;
@@ -210,10 +206,9 @@ namespace ClassLibrary1 {
 			this->button7->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button7->ForeColor = System::Drawing::Color::White;
-			this->button7->Location = System::Drawing::Point(300, 111);
-			this->button7->Margin = System::Windows::Forms::Padding(4);
+			this->button7->Location = System::Drawing::Point(225, 90);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(80, 74);
+			this->button7->Size = System::Drawing::Size(60, 60);
 			this->button7->TabIndex = 8;
 			this->button7->Text = L"button7";
 			this->button7->UseVisualStyleBackColor = false;
@@ -227,10 +222,9 @@ namespace ClassLibrary1 {
 			this->button8->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button8->ForeColor = System::Drawing::Color::White;
-			this->button8->Location = System::Drawing::Point(212, 111);
-			this->button8->Margin = System::Windows::Forms::Padding(4);
+			this->button8->Location = System::Drawing::Point(159, 90);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(80, 74);
+			this->button8->Size = System::Drawing::Size(60, 60);
 			this->button8->TabIndex = 7;
 			this->button8->Text = L"button8";
 			this->button8->UseVisualStyleBackColor = false;
@@ -244,10 +238,9 @@ namespace ClassLibrary1 {
 			this->button9->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button9->ForeColor = System::Drawing::Color::White;
-			this->button9->Location = System::Drawing::Point(124, 111);
-			this->button9->Margin = System::Windows::Forms::Padding(4);
+			this->button9->Location = System::Drawing::Point(93, 90);
 			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(80, 74);
+			this->button9->Size = System::Drawing::Size(60, 60);
 			this->button9->TabIndex = 6;
 			this->button9->Text = L"button9";
 			this->button9->UseVisualStyleBackColor = false;
@@ -261,10 +254,9 @@ namespace ClassLibrary1 {
 			this->button10->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button10->ForeColor = System::Drawing::Color::White;
-			this->button10->Location = System::Drawing::Point(36, 111);
-			this->button10->Margin = System::Windows::Forms::Padding(4);
+			this->button10->Location = System::Drawing::Point(27, 90);
 			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(80, 74);
+			this->button10->Size = System::Drawing::Size(60, 60);
 			this->button10->TabIndex = 5;
 			this->button10->Text = L"button10";
 			this->button10->UseVisualStyleBackColor = false;
@@ -278,10 +270,9 @@ namespace ClassLibrary1 {
 			this->button11->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button11->ForeColor = System::Drawing::Color::White;
-			this->button11->Location = System::Drawing::Point(388, 192);
-			this->button11->Margin = System::Windows::Forms::Padding(4);
+			this->button11->Location = System::Drawing::Point(291, 156);
 			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(80, 74);
+			this->button11->Size = System::Drawing::Size(60, 60);
 			this->button11->TabIndex = 14;
 			this->button11->Text = L"button11";
 			this->button11->UseVisualStyleBackColor = false;
@@ -295,10 +286,9 @@ namespace ClassLibrary1 {
 			this->button12->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button12->ForeColor = System::Drawing::Color::White;
-			this->button12->Location = System::Drawing::Point(300, 192);
-			this->button12->Margin = System::Windows::Forms::Padding(4);
+			this->button12->Location = System::Drawing::Point(225, 156);
 			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(80, 74);
+			this->button12->Size = System::Drawing::Size(60, 60);
 			this->button12->TabIndex = 13;
 			this->button12->Text = L"button12";
 			this->button12->UseVisualStyleBackColor = false;
@@ -312,10 +302,9 @@ namespace ClassLibrary1 {
 			this->button13->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button13->ForeColor = System::Drawing::Color::White;
-			this->button13->Location = System::Drawing::Point(212, 192);
-			this->button13->Margin = System::Windows::Forms::Padding(4);
+			this->button13->Location = System::Drawing::Point(159, 156);
 			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(80, 74);
+			this->button13->Size = System::Drawing::Size(60, 60);
 			this->button13->TabIndex = 12;
 			this->button13->Text = L"button13";
 			this->button13->UseVisualStyleBackColor = false;
@@ -329,10 +318,9 @@ namespace ClassLibrary1 {
 			this->button14->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button14->ForeColor = System::Drawing::Color::White;
-			this->button14->Location = System::Drawing::Point(124, 192);
-			this->button14->Margin = System::Windows::Forms::Padding(4);
+			this->button14->Location = System::Drawing::Point(93, 156);
 			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(80, 74);
+			this->button14->Size = System::Drawing::Size(60, 60);
 			this->button14->TabIndex = 11;
 			this->button14->Text = L"button14";
 			this->button14->UseVisualStyleBackColor = false;
@@ -346,10 +334,9 @@ namespace ClassLibrary1 {
 			this->button15->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button15->ForeColor = System::Drawing::Color::White;
-			this->button15->Location = System::Drawing::Point(36, 192);
-			this->button15->Margin = System::Windows::Forms::Padding(4);
+			this->button15->Location = System::Drawing::Point(27, 156);
 			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(80, 74);
+			this->button15->Size = System::Drawing::Size(60, 60);
 			this->button15->TabIndex = 10;
 			this->button15->Text = L"button15";
 			this->button15->UseVisualStyleBackColor = false;
@@ -363,13 +350,13 @@ namespace ClassLibrary1 {
 			this->button16->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button16->ForeColor = System::Drawing::Color::White;
-			this->button16->Location = System::Drawing::Point(388, 273);
-			this->button16->Margin = System::Windows::Forms::Padding(4);
+			this->button16->Location = System::Drawing::Point(291, 222);
 			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(80, 74);
+			this->button16->Size = System::Drawing::Size(60, 60);
 			this->button16->TabIndex = 19;
-			this->button16->Text = L"button16";
+			this->button16->Text = L"Vec tor";
 			this->button16->UseVisualStyleBackColor = false;
+			this->button16->Click += gcnew System::EventHandler(this, &FxPanel::button16_Click);
 			// 
 			// button17
 			// 
@@ -380,10 +367,9 @@ namespace ClassLibrary1 {
 			this->button17->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button17->ForeColor = System::Drawing::Color::White;
-			this->button17->Location = System::Drawing::Point(300, 273);
-			this->button17->Margin = System::Windows::Forms::Padding(4);
+			this->button17->Location = System::Drawing::Point(225, 222);
 			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(80, 74);
+			this->button17->Size = System::Drawing::Size(60, 60);
 			this->button17->TabIndex = 18;
 			this->button17->Text = L"button17";
 			this->button17->UseVisualStyleBackColor = false;
@@ -397,10 +383,9 @@ namespace ClassLibrary1 {
 			this->button18->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button18->ForeColor = System::Drawing::Color::White;
-			this->button18->Location = System::Drawing::Point(212, 273);
-			this->button18->Margin = System::Windows::Forms::Padding(4);
+			this->button18->Location = System::Drawing::Point(159, 222);
 			this->button18->Name = L"button18";
-			this->button18->Size = System::Drawing::Size(80, 74);
+			this->button18->Size = System::Drawing::Size(60, 60);
 			this->button18->TabIndex = 17;
 			this->button18->Text = L"button18";
 			this->button18->UseVisualStyleBackColor = false;
@@ -414,10 +399,9 @@ namespace ClassLibrary1 {
 			this->button19->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button19->ForeColor = System::Drawing::Color::White;
-			this->button19->Location = System::Drawing::Point(124, 273);
-			this->button19->Margin = System::Windows::Forms::Padding(4);
+			this->button19->Location = System::Drawing::Point(93, 222);
 			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(80, 74);
+			this->button19->Size = System::Drawing::Size(60, 60);
 			this->button19->TabIndex = 16;
 			this->button19->Text = L"button19";
 			this->button19->UseVisualStyleBackColor = false;
@@ -431,17 +415,16 @@ namespace ClassLibrary1 {
 			this->button20->Font = (gcnew System::Drawing::Font(L"Ebrima", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button20->ForeColor = System::Drawing::Color::White;
-			this->button20->Location = System::Drawing::Point(36, 273);
-			this->button20->Margin = System::Windows::Forms::Padding(4);
+			this->button20->Location = System::Drawing::Point(27, 222);
 			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(80, 74);
+			this->button20->Size = System::Drawing::Size(60, 60);
 			this->button20->TabIndex = 15;
 			this->button20->Text = L"button20";
 			this->button20->UseVisualStyleBackColor = false;
 			// 
 			// FxPanel
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
 				static_cast<System::Int32>(static_cast<System::Byte>(28)));
@@ -465,20 +448,22 @@ namespace ClassLibrary1 {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FxPanel";
-			this->Size = System::Drawing::Size(511, 382);
+			this->Size = System::Drawing::Size(383, 310);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
-	VecForm->ShowDialog();
+	
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 
+private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
+	VecForm->ShowDialog();
+}
 };
 }
