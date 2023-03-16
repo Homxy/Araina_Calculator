@@ -495,48 +495,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
 		VecForm->ShowDialog();
 	}
-	private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "sin") {
-			total += button15->Text;
-			cal += "s";
-		}
-		ValueChanged(this, EventArgs::Empty);
-	}
-	private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "cos") {
-			total += button15->Text;
-			cal += "c";
-		}
-		ValueChanged(this, EventArgs::Empty);
-	}
-	private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "tan") {
-			total += button15->Text;
-			cal += "t";
-		}
-		ValueChanged(this, EventArgs::Empty);
-	}
-	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "arcsin") {
-			total += button15->Text;
-			cal += "as";
-		}
-		ValueChanged(this, EventArgs::Empty);
-	}
-	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "arccos") {
-			total += button15->Text;
-			cal += "ac";
-		}
-		ValueChanged(this, EventArgs::Empty);
-	}
-	private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "arctan") {
-			total += button15->Text;
-			cal += "at";
-		}
-		ValueChanged(this, EventArgs::Empty);
-	}
+	
 	private: System::Void FxPanel_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 };
