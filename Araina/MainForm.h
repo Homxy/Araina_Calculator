@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <vector>
+#include <stack>
 namespace Araina {
 
 	using namespace System;
@@ -355,7 +356,7 @@ namespace Araina {
 		double num = 0;
 		std::vector<double> n;
 		std::vector<char> c;
-		std::vector<int> parens;
+		std::stack<int> parens;
 		for (int i = 0; i < textin->Length;) {
 			if (textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
 				ftext = "";
@@ -372,7 +373,7 @@ namespace Araina {
 				i++;
 			}
 			else if (textin[i] == '(') {
-				parens.push_back(n.size());
+				parens.push(n.size());
 				i++;
 			}
 			else if (textin[i] == ')') {
