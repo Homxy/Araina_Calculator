@@ -132,7 +132,7 @@ namespace ClassLibrary1 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(80, 74);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"pow 2";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &FxPanel::button2_Click);
 			// 
@@ -150,7 +150,7 @@ namespace ClassLibrary1 {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(80, 74);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"button3";
+			this->button3->Text = L"pow 3";
 			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// button4
@@ -482,22 +482,12 @@ namespace ClassLibrary1 {
 
 		}
 #pragma endregion
-	public: String^ total = gcnew String("");
-		public: String^ cal = gcnew String("");
-	public: String^ SendTotal() {
-		return total;
-	}
-	public: String^ Sendcal() {
-		return cal;
-	}
-
-	public: event EventHandler^ ValueChanged;
-
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 
 	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
 		Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
