@@ -129,7 +129,7 @@ namespace ClassLibrary1 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(60, 60);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"pow 2";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &FxPanel::button2_Click);
 			// 
@@ -146,7 +146,7 @@ namespace ClassLibrary1 {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(60, 60);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"button3";
+			this->button3->Text = L"pow 3";
 			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// button4
@@ -454,9 +454,22 @@ namespace ClassLibrary1 {
 
 		}
 #pragma endregion
-	
+	public: String^ total = gcnew String("");
+	public: String^ cal = gcnew String("");
+public: String^ SendTotala() {
+	return total;
+}
+public: String^ SendFxcal() {
+	return cal;
+}
+
+private: event EventHandler^ ValueChanged;
+
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+	total += "2";
+	cal += "2";
+
+	ValueChanged(this, EventArgs::Empty);
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
