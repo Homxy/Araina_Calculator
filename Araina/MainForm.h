@@ -452,11 +452,48 @@ namespace Araina {
 				double result = pow(base, exponent);
 				return result;
 			}
-	}
+		}
 
-
-
-
+	public: double tripplepower(double base, double exponent, double upperexponent) {
+			if (exponent == 0 && upperexponent == 0) {
+				MessageBox::Show("cannot find");
+			}
+			else if (exponent == 0 && upperexponent > 0) {
+				return 1;
+			}
+			else if (exponent > 0 && upperexponent == 1) {
+				double result = pow(base, exponent);
+				return result;
+			}
+			else if (exponent < 0 && upperexponent == 1) {
+				double resultexpo = 1 / pow(base, exponent);
+				return resultexpo;
+			}
+			else if (exponent < 0 && upperexponent == 0) {
+				double result = 1 / base;
+				return result;
+			}
+			else if (exponent == 1 && (upperexponent > 0 || upperexponent < 0)) {
+				return base;
+			}
+			else if (upperexponent == 0 && exponent > 0) {
+				return base;
+			}
+			else if (upperexponent < 0 && exponent == 0) {
+				MessageBox::Show("cannot find");
+			}
+			else if (exponent < 0 && upperexponent < 0) {
+				double convertexpo = exponent * -1;
+				double convertupperexpo = upperexponent * -1;
+				double under = 1 / pow(convertexpo, convertupperexpo);
+				double result = 1 / pow(2, under);
+				return result;
+			}
+			else {
+				double result = pow(base, pow(exponent, upperexponent));
+				return result;
+			}
+		}
 
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		numPanel1->BringToFront();
