@@ -1,6 +1,7 @@
 #pragma once
 #include "NumPanel.h"
 #include "../Araina/VectorForm.h"
+#include<cmath>
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -148,6 +149,7 @@ namespace ClassLibrary1 {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"pow 3";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &FxPanel::button3_Click);
 			// 
 			// button4
 			// 
@@ -466,9 +468,8 @@ public: String^ SendFxcal() {
 private: event EventHandler^ ValueChanged;
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	total += "2";
-	cal += "2";
-
+	total += "pow(";
+	cal += "pow(";
 	ValueChanged(this, EventArgs::Empty);
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -477,6 +478,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
 	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
 	VecForm->ShowDialog();
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

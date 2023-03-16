@@ -439,7 +439,20 @@ namespace Araina {
 			  return result;
 		  }
 
-
+	public: double power(double base, double exponent) {
+		if (exponent == 0) {
+			return 1;
+		}
+		else if (exponent < 0) {
+			double convertexpo = exponent * -1;
+			double result = 1 / (pow(base, convertexpo));
+				return result;
+		}
+		else if (exponent > 0) {
+			double result = pow(base, exponent);
+			return result;
+		}
+	}
 
 
 
