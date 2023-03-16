@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include <vector>
-#define _CRT_SECURE_NO_WARNINGS
 namespace Araina {
 
 	using namespace System;
@@ -247,6 +246,7 @@ namespace Araina {
 			this->numPanel1->Size = System::Drawing::Size(383, 310);
 			this->numPanel1->TabIndex = 8;
 			this->numPanel1->ValueChanged += gcnew System::EventHandler(this, &MainForm::numPanel1_ValueChanged);
+			this->numPanel1->Load += gcnew System::EventHandler(this, &MainForm::numPanel1_Load);
 			// 
 			// label2
 			// 
@@ -284,31 +284,11 @@ namespace Araina {
 		}
 
 #pragma endregion
-	public: void eval(String^ textin) {
-		double result = 0;
-		int j = 0;
-		char op = '+';
-		String^ ftext = "";
-		double num = 0;
-		std::vector<double> n;
-		std::vector<char> c;
-		for (int i = 0; i < textin->Length;) {
-			if (textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
-				ftext = "";
-				while (i < textin->Length && textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
-					ftext += textin[i];
-					i++;
-				}
-				num = Convert::ToDouble(ftext);
-				n.push_back(num);
-			}
-			else if (textin[i] == '+' || textin[i] == '-' || textin[i] == '*' || textin[i] == '/') {
-				op = textin[i];
-				c.push_back(op);
-				i++;
-			}
+	public: void multi(std::vector<double> &n,std::vector<char> &c) {
+		if (c.size() == n.size() && c[0] == '-') {
+			n[0] = -1 * n[0];
+			c.erase(c.begin());
 		}
-
 		for (int k = c.size(); k > 0; k--) {
 			char op = c[k - 1];
 			if (op == '*') {
@@ -329,21 +309,134 @@ namespace Araina {
 				n.push_back(num1 / num2);
 			}
 		}
+	}
 
-		result = n[0];
+	public: void plusminus(std::vector<double> &n, std::vector<char> &c,double &result) {
+		if (c.size() == n.size() && c[0] == '-') {
+			result -= n[0];
+			c.erase(c.begin());
+		}
+		else {
+			result = n[0];
+		}
+
+
 		for (int j = 1; j < n.size(); j++) {
-			if (c[j-1] == '+') {
+			if (c[j - 1] == '+') {
 				result += n[j];
 			}
-			else if (c[j-1] == '-') {
+			else if (c[j - 1] == '-') {
 				result -= n[j];
 			}
-			
+
 		}
-		
-			
+
+	}
+	public: void inner(String^ textin) {
+		int j = 0;
+		std::vector<double> open;
+		std::vector<double> clo;
+		int x = textin->IndexOf("(");
+		int y = textin->IndexOf(")");
+		while (x!=-1&&y!=-1) {
+			x = textin->IndexOf("(", x + j);
+			y = textin->IndexOf(")", y + j);
+			MessageBox::Show(Convert::ToString(x),"x");
+			MessageBox::Show(Convert::ToString(y), "y");
+			j++;
+		}
+	}
+
+	public: void eval(String^ textin) {
+		double result = 0;
+		int j = 0;
+		char op = '+';
+		String^ ftext = "";
+		double num = 0;
+		std::vector<double> n;
+		std::vector<char> c;
+		std::vector<int> parens;
+		for (int i = 0; i < textin->Length;) {
+			if (textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
+				ftext = "";
+				while (i < textin->Length && textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
+					ftext += textin[i];
+					i++;
+				}
+				num = Convert::ToDouble(ftext);
+				n.push_back(num);
+			}
+			else if (textin[i] == '+' || textin[i] == '-' || textin[i] == '*' || textin[i] == '/') {
+				op = textin[i];
+				c.push_back(op);
+				i++;
+			}
+			else if (textin[i] == '(') {
+				parens.push_back(n.size());
+				i++;
+			}
+			else if (textin[i] == ')') {
+				if (parens.empty()) {
+					// handle error: unbalanced parentheses
+					return;
+				}
+				int start = parens.top();
+				parens.pop();
+				int end = n.size() - 1;
+				double inner_result = evaluate_expression(n, c, start, end);
+				n.erase(n.begin() + start, n.end());
+				n.push_back(inner_result);
+				c.erase(c.begin() + start, c.end());
+				if (start > 0) {
+					c.push_back(c[start - 1]);
+				}
+				i++;
+			}
+			else {
+				// handle error: invalid character
+				return;
+			}
+		}
+		if (!parens.empty()) {
+			// handle error: unbalanced parentheses
+			return;
+		}
+		result = evaluate_expression(n, c, 0, n.size() - 1);
 		label2->Text = Convert::ToString(result);
 	}
+
+		double evaluate_expression(std::vector<double>& n, std::vector<char>& c, int start, int end) {
+			for (int k = end; k > start; k--) {
+				char op = c[k - 1];
+				if (op == '*') {
+					double num1 = n[k - 1];
+					double num2 = n[k];
+					n.erase(n.begin() + k);
+					n.erase(n.begin() + k - 1);
+					c.erase(c.begin() + k - 1);
+					n.push_back(num1 * num2);
+				}
+				else if (op == '/') {
+					double num1 = n[k - 1];
+					double num2 = n[k];
+					n.erase(n.begin() + k);
+					n.erase(n.begin() + k - 1);
+					c.erase(c.begin() + k - 1);
+					n.push_back(num1 / num2);
+				}
+			}
+			double result = n[start];
+			  for (int j = start + 1; j <= end; j++) {
+				  if (c[j - 1] == '+') {
+					  result += n[j];
+				  }
+				  else if (c[j - 1] == '-') {
+					  result -= n[j];
+				  }
+			  }
+			  return result;
+		  }
+
 
 
 
@@ -368,7 +461,8 @@ namespace Araina {
 
 	private: System::Void Button_Calculate_Click(System::Object^ sender, System::EventArgs^ e) {
 		eval(numPanel1->Sendcal());
-
 	}
+private: System::Void numPanel1_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

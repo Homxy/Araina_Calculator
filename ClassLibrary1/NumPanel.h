@@ -71,6 +71,8 @@ namespace ClassLibrary1 {
 	private: System::Windows::Forms::Button^ num7;
 	private: System::Windows::Forms::Button^ numBack;
 	private: System::Windows::Forms::Button^ numClear;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 
 
 
@@ -105,6 +107,8 @@ namespace ClassLibrary1 {
 			this->num7 = (gcnew System::Windows::Forms::Button());
 			this->numBack = (gcnew System::Windows::Forms::Button());
 			this->numClear = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// numDot
@@ -412,13 +416,49 @@ namespace ClassLibrary1 {
 			this->numClear->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->numClear->ForeColor = System::Drawing::Color::White;
-			this->numClear->Location = System::Drawing::Point(290, 85);
+			this->numClear->Location = System::Drawing::Point(290, 217);
 			this->numClear->Name = L"numClear";
-			this->numClear->Size = System::Drawing::Size(60, 192);
+			this->numClear->Size = System::Drawing::Size(60, 60);
 			this->numClear->TabIndex = 17;
 			this->numClear->Text = L"C";
 			this->numClear->UseVisualStyleBackColor = false;
 			this->numClear->Click += gcnew System::EventHandler(this, &NumPanel::numClear_Click);
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
+				static_cast<System::Int32>(static_cast<System::Byte>(60)));
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
+				static_cast<System::Int32>(static_cast<System::Byte>(75)));
+			this->button1->Location = System::Drawing::Point(290, 85);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(60, 60);
+			this->button1->TabIndex = 18;
+			this->button1->Text = L"(";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &NumPanel::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
+				static_cast<System::Int32>(static_cast<System::Byte>(60)));
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Ebrima", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
+				static_cast<System::Int32>(static_cast<System::Byte>(75)));
+			this->button2->Location = System::Drawing::Point(290, 151);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(60, 60);
+			this->button2->TabIndex = 19;
+			this->button2->Text = L")";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &NumPanel::button2_Click);
 			// 
 			// NumPanel
 			// 
@@ -426,6 +466,8 @@ namespace ClassLibrary1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
 				static_cast<System::Int32>(static_cast<System::Byte>(28)));
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->numClear);
 			this->Controls->Add(this->numBack);
 			this->Controls->Add(this->numDivide);
@@ -530,10 +572,8 @@ namespace ClassLibrary1 {
 		ValueChanged(this, EventArgs::Empty);
 	}
 	private: System::Void numMinus_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (total != "") {
-			total += numMinus->Text;
-			cal += "-";
-		}
+		total += numMinus->Text;
+		cal += "-";
 		
 		ValueChanged(this, EventArgs::Empty);
 	}
@@ -567,5 +607,15 @@ namespace ClassLibrary1 {
 		ValueChanged(this, EventArgs::Empty);
 	}
 
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += "(";
+		cal += "(";
+		ValueChanged(this, EventArgs::Empty);
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		total += ")";
+		cal += ")";
+		ValueChanged(this, EventArgs::Empty);
+	}
 };
 }
