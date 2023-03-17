@@ -426,6 +426,25 @@ namespace Araina {
 					  c.erase(c.begin() + k - 1);
 					  n.push_back(num1 / num2);
 				  }
+				  else if (op == '^') {
+					  double num1 = n[k - 1];
+					  double num2 = n[k];
+					  n.erase(n.begin() + k);
+					  n.erase(n.begin() + k - 1);
+					  c.erase(c.begin() + k - 1);
+					  n.push_back(power(num1,num2));
+				  }
+				  else if (op == '^') {
+					  double num1 = n[k - 1];
+					  double num2 = n[k];
+					  double num3 = n[k + 1];
+					  n.erase(n.begin() + k + 1);
+					  n.erase(n.begin() + k);
+					  n.erase(n.begin() + k - 1);
+					  c.erase(c.begin() + k + 1);
+					  c.erase(c.begin() + k - 1);
+					  n.push_back(tripplepower(num1,num2,num3));
+				  }
 			  }
 			  double result = n[start];
 			  for (int j = start + 1; j <= end; j++) {
@@ -517,6 +536,8 @@ namespace Araina {
 		eval(numPanel1->Sendcal());
 	}
 private: System::Void numPanel1_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

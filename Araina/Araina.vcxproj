@@ -129,6 +129,9 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PowerForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VectorForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -136,6 +139,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PowerForm.resx">
+      <DependentUpon>PowerForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorForm.resx">
       <DependentUpon>VectorForm.h</DependentUpon>

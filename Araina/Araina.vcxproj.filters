@@ -32,5 +32,8 @@
     <ClInclude Include="VectorForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PowerForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
