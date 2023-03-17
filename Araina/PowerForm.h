@@ -266,7 +266,8 @@ public: double tripplepower(double base, double exponent, double upperexponent) 
 			   return result;
 		   }
 		   else if (exponent < 0 && upperexponent == 1) {
-			   double resultexpo = 1 / pow(base, exponent);
+			   double convertexpo = exponent * -1;
+			   double resultexpo = 1 / pow(base, convertexpo);
 			   return resultexpo;
 		   }
 		   else if (exponent < 0 && upperexponent == 0) {

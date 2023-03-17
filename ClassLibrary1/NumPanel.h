@@ -121,7 +121,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->numDot->ForeColor = System::Drawing::Color::White;
 			this->numDot->Location = System::Drawing::Point(35, 267);
-			this->numDot->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numDot->Margin = System::Windows::Forms::Padding(4);
 			this->numDot->Name = L"numDot";
 			this->numDot->Size = System::Drawing::Size(80, 74);
 			this->numDot->TabIndex = 0;
@@ -140,7 +140,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num0->ForeColor = System::Drawing::Color::White;
 			this->num0->Location = System::Drawing::Point(123, 267);
-			this->num0->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num0->Margin = System::Windows::Forms::Padding(4);
 			this->num0->Name = L"num0";
 			this->num0->Size = System::Drawing::Size(80, 74);
 			this->num0->TabIndex = 1;
@@ -159,7 +159,7 @@ namespace ClassLibrary1 {
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->button3->Location = System::Drawing::Point(211, 267);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(80, 74);
 			this->button3->TabIndex = 2;
@@ -177,7 +177,7 @@ namespace ClassLibrary1 {
 			this->numPlus->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->numPlus->Location = System::Drawing::Point(299, 267);
-			this->numPlus->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numPlus->Margin = System::Windows::Forms::Padding(4);
 			this->numPlus->Name = L"numPlus";
 			this->numPlus->Size = System::Drawing::Size(80, 74);
 			this->numPlus->TabIndex = 3;
@@ -196,7 +196,7 @@ namespace ClassLibrary1 {
 			this->numMinus->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->numMinus->Location = System::Drawing::Point(299, 186);
-			this->numMinus->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numMinus->Margin = System::Windows::Forms::Padding(4);
 			this->numMinus->Name = L"numMinus";
 			this->numMinus->Size = System::Drawing::Size(80, 74);
 			this->numMinus->TabIndex = 7;
@@ -214,7 +214,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num3->ForeColor = System::Drawing::Color::White;
 			this->num3->Location = System::Drawing::Point(211, 186);
-			this->num3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num3->Margin = System::Windows::Forms::Padding(4);
 			this->num3->Name = L"num3";
 			this->num3->Size = System::Drawing::Size(80, 74);
 			this->num3->TabIndex = 6;
@@ -233,7 +233,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num2->ForeColor = System::Drawing::Color::White;
 			this->num2->Location = System::Drawing::Point(123, 186);
-			this->num2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num2->Margin = System::Windows::Forms::Padding(4);
 			this->num2->Name = L"num2";
 			this->num2->Size = System::Drawing::Size(80, 74);
 			this->num2->TabIndex = 5;
@@ -251,7 +251,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num1->ForeColor = System::Drawing::Color::White;
 			this->num1->Location = System::Drawing::Point(35, 186);
-			this->num1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num1->Margin = System::Windows::Forms::Padding(4);
 			this->num1->Name = L"num1";
 			this->num1->Size = System::Drawing::Size(80, 74);
 			this->num1->TabIndex = 4;
@@ -270,11 +270,11 @@ namespace ClassLibrary1 {
 			this->numMulti->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->numMulti->Location = System::Drawing::Point(299, 105);
-			this->numMulti->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numMulti->Margin = System::Windows::Forms::Padding(4);
 			this->numMulti->Name = L"numMulti";
 			this->numMulti->Size = System::Drawing::Size(80, 74);
 			this->numMulti->TabIndex = 11;
-			this->numMulti->Text = L"×";
+			this->numMulti->Text = L"x";
 			this->numMulti->UseVisualStyleBackColor = false;
 			this->numMulti->Click += gcnew System::EventHandler(this, &NumPanel::numMulti_Click);
 			// 
@@ -288,7 +288,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num6->ForeColor = System::Drawing::Color::White;
 			this->num6->Location = System::Drawing::Point(211, 105);
-			this->num6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num6->Margin = System::Windows::Forms::Padding(4);
 			this->num6->Name = L"num6";
 			this->num6->Size = System::Drawing::Size(80, 74);
 			this->num6->TabIndex = 10;
@@ -306,7 +306,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num5->ForeColor = System::Drawing::Color::White;
 			this->num5->Location = System::Drawing::Point(123, 105);
-			this->num5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num5->Margin = System::Windows::Forms::Padding(4);
 			this->num5->Name = L"num5";
 			this->num5->Size = System::Drawing::Size(80, 74);
 			this->num5->TabIndex = 9;
@@ -324,7 +324,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num4->ForeColor = System::Drawing::Color::White;
 			this->num4->Location = System::Drawing::Point(35, 105);
-			this->num4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num4->Margin = System::Windows::Forms::Padding(4);
 			this->num4->Name = L"num4";
 			this->num4->Size = System::Drawing::Size(80, 74);
 			this->num4->TabIndex = 8;
@@ -343,11 +343,11 @@ namespace ClassLibrary1 {
 			this->numDivide->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->numDivide->Location = System::Drawing::Point(299, 23);
-			this->numDivide->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numDivide->Margin = System::Windows::Forms::Padding(4);
 			this->numDivide->Name = L"numDivide";
 			this->numDivide->Size = System::Drawing::Size(80, 74);
 			this->numDivide->TabIndex = 15;
-			this->numDivide->Text = L"÷";
+			this->numDivide->Text = L"/";
 			this->numDivide->UseVisualStyleBackColor = false;
 			this->numDivide->Click += gcnew System::EventHandler(this, &NumPanel::numDivide_Click);
 			// 
@@ -361,7 +361,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num9->ForeColor = System::Drawing::Color::White;
 			this->num9->Location = System::Drawing::Point(211, 23);
-			this->num9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num9->Margin = System::Windows::Forms::Padding(4);
 			this->num9->Name = L"num9";
 			this->num9->Size = System::Drawing::Size(80, 74);
 			this->num9->TabIndex = 14;
@@ -379,7 +379,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num8->ForeColor = System::Drawing::Color::White;
 			this->num8->Location = System::Drawing::Point(123, 23);
-			this->num8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num8->Margin = System::Windows::Forms::Padding(4);
 			this->num8->Name = L"num8";
 			this->num8->Size = System::Drawing::Size(80, 74);
 			this->num8->TabIndex = 13;
@@ -397,7 +397,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->num7->ForeColor = System::Drawing::Color::White;
 			this->num7->Location = System::Drawing::Point(35, 23);
-			this->num7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->num7->Margin = System::Windows::Forms::Padding(4);
 			this->num7->Name = L"num7";
 			this->num7->Size = System::Drawing::Size(80, 74);
 			this->num7->TabIndex = 12;
@@ -416,7 +416,7 @@ namespace ClassLibrary1 {
 			this->numBack->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->numBack->Location = System::Drawing::Point(387, 23);
-			this->numBack->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numBack->Margin = System::Windows::Forms::Padding(4);
 			this->numBack->Name = L"numBack";
 			this->numBack->Size = System::Drawing::Size(80, 74);
 			this->numBack->TabIndex = 16;
@@ -434,7 +434,7 @@ namespace ClassLibrary1 {
 				static_cast<System::Byte>(0)));
 			this->numClear->ForeColor = System::Drawing::Color::White;
 			this->numClear->Location = System::Drawing::Point(387, 267);
-			this->numClear->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->numClear->Margin = System::Windows::Forms::Padding(4);
 			this->numClear->Name = L"numClear";
 			this->numClear->Size = System::Drawing::Size(80, 74);
 			this->numClear->TabIndex = 17;
@@ -453,7 +453,7 @@ namespace ClassLibrary1 {
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->button1->Location = System::Drawing::Point(387, 105);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(80, 74);
 			this->button1->TabIndex = 18;
@@ -472,7 +472,7 @@ namespace ClassLibrary1 {
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
 				static_cast<System::Int32>(static_cast<System::Byte>(75)));
 			this->button2->Location = System::Drawing::Point(387, 186);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(80, 74);
 			this->button2->TabIndex = 19;
@@ -506,7 +506,7 @@ namespace ClassLibrary1 {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->num0);
 			this->Controls->Add(this->numDot);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"NumPanel";
 			this->Size = System::Drawing::Size(511, 382);
 			this->Load += gcnew System::EventHandler(this, &NumPanel::NumPanel_Load);

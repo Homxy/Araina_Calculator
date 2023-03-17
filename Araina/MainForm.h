@@ -404,8 +404,9 @@ namespace Araina {
 			return;
 		}
 		//MessageBox::Show(Convert::ToString(c.size()), "n");
-
-		result = evaluate_expression(n, c, 0, c.size());
+		multi(n, c);
+		plusminus(n, c, result);
+		//result = evaluate_expression(n, c, 0, c.size());
 		label2->Text = Convert::ToString(result);
 	}
 
