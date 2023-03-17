@@ -403,9 +403,9 @@ namespace Araina {
 			// handle error: unbalanced parentheses
 			return;
 		}
+		//MessageBox::Show(Convert::ToString(c.size()), "n");
 
-
-		result = evaluate_expression(n, c, 0, n.size()-1);
+		result = evaluate_expression(n, c, 0, c.size());
 		label2->Text = Convert::ToString(result);
 	}
 
