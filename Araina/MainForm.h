@@ -63,7 +63,7 @@ namespace Araina {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -286,7 +286,7 @@ namespace Araina {
 		}
 
 #pragma endregion
-	public: void multi(std::vector<double> &n,std::vector<char> &c) {
+	public: void multi(std::vector<double>& n, std::vector<char>& c) {
 		if (c.size() == n.size() && c[0] == '-') {
 			n[0] = -1 * n[0];
 			c.erase(c.begin());
@@ -313,7 +313,7 @@ namespace Araina {
 		}
 	}
 
-	public: void plusminus(std::vector<double> &n, std::vector<char> &c,double &result) {
+	public: void plusminus(std::vector<double>& n, std::vector<char>& c, double& result) {
 		if (c.size() == n.size() && c[0] == '-') {
 			result -= n[0];
 			c.erase(c.begin());
@@ -340,10 +340,10 @@ namespace Araina {
 		std::vector<double> clo;
 		int x = textin->IndexOf("(");
 		int y = textin->IndexOf(")");
-		while (x!=-1&&y!=-1) {
+		while (x != -1 && y != -1) {
 			x = textin->IndexOf("(", x + j);
 			y = textin->IndexOf(")", y + j);
-			MessageBox::Show(Convert::ToString(x),"x");
+			MessageBox::Show(Convert::ToString(x), "x");
 			MessageBox::Show(Convert::ToString(y), "y");
 			j++;
 		}
@@ -407,27 +407,27 @@ namespace Araina {
 		label2->Text = Convert::ToString(result);
 	}
 
-		double evaluate_expression(std::vector<double>& n, std::vector<char>& c, int start, int end) {
-			for (int k = end; k > start; k--) {
-				char op = c[k - 1];
-				if (op == '*') {
-					double num1 = n[k - 1];
-					double num2 = n[k];
-					n.erase(n.begin() + k);
-					n.erase(n.begin() + k - 1);
-					c.erase(c.begin() + k - 1);
-					n.push_back(num1 * num2);
-				}
-				else if (op == '/') {
-					double num1 = n[k - 1];
-					double num2 = n[k];
-					n.erase(n.begin() + k);
-					n.erase(n.begin() + k - 1);
-					c.erase(c.begin() + k - 1);
-					n.push_back(num1 / num2);
-				}
-			}
-			double result = n[start];
+		  double evaluate_expression(std::vector<double>& n, std::vector<char>& c, int start, int end) {
+			  for (int k = end; k > start; k--) {
+				  char op = c[k - 1];
+				  if (op == '*') {
+					  double num1 = n[k - 1];
+					  double num2 = n[k];
+					  n.erase(n.begin() + k);
+					  n.erase(n.begin() + k - 1);
+					  c.erase(c.begin() + k - 1);
+					  n.push_back(num1 * num2);
+				  }
+				  else if (op == '/') {
+					  double num1 = n[k - 1];
+					  double num2 = n[k];
+					  n.erase(n.begin() + k);
+					  n.erase(n.begin() + k - 1);
+					  c.erase(c.begin() + k - 1);
+					  n.push_back(num1 / num2);
+				  }
+			  }
+			  double result = n[start];
 			  for (int j = start + 1; j <= end; j++) {
 				  if (c[j - 1] == '+') {
 					  result += n[j];
@@ -498,7 +498,7 @@ namespace Araina {
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		numPanel1->BringToFront();
 	}
-	
+
 	private: System::Void Select_Num_Click(System::Object^ sender, System::EventArgs^ e) {
 		numPanel1->BringToFront();
 	}
@@ -508,7 +508,7 @@ namespace Araina {
 	private: System::Void Select_Fx_Click(System::Object^ sender, System::EventArgs^ e) {
 		fxPanel1->BringToFront();
 	}
-		 
+
 	private: System::Void numPanel1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		label1->Text = numPanel1->SendTotal() + fxPanel1->SendTotala();
 	}
@@ -517,8 +517,6 @@ namespace Araina {
 		eval(numPanel1->Sendcal());
 	}
 private: System::Void numPanel1_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
