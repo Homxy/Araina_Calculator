@@ -491,6 +491,36 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 
+	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+		Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
+		VecForm->ShowDialog();
+	}
+	private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+	}
+	private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+	}
+	private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+	}
+	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+	}
+	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+	}
+	private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+	}
+	private: System::Void FxPanel_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
 	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
 	VecForm->ShowDialog();

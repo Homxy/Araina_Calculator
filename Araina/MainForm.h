@@ -100,7 +100,6 @@ namespace Araina {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(383, 106);
 			this->textBox1->TabIndex = 0;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox1_TextChanged);
 			// 
 			// Select_Num
 			// 
@@ -529,7 +528,7 @@ namespace Araina {
 	}
 
 	private: System::Void numPanel1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-		label1->Text = numPanel1->SendTotal() + fxPanel1->SendTotala();
+		label1->Text = numPanel1->SendTotal();
 	}
 
 	private: System::Void Button_Calculate_Click(System::Object^ sender, System::EventArgs^ e) {
