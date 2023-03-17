@@ -415,6 +415,7 @@ namespace ClassLibrary1 {
 			this->button19->TabIndex = 16;
 			this->button19->Text = L"button19";
 			this->button19->UseVisualStyleBackColor = false;
+			this->button19->Click += gcnew System::EventHandler(this, &FxPanel::button19_Click);
 			// 
 			// button20
 			// 
@@ -485,10 +486,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 
-	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
-		Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
-		VecForm->ShowDialog();
-	}
+private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
+	VecForm->ShowDialog();
+}
 
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -505,5 +506,9 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	String^ FilePath = "C:/Users/earth/source/repos/Araina_Calculator/Araina/sqrt.exe";
 	Process::Start(FilePath);
 }
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ FilePath = "C:/Users/Admin/source/repos/Araina_Calculator/Araina/trigon.exe";
+		Process::Start(FilePath);
+	}
 };
 }
