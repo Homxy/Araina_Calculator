@@ -357,7 +357,7 @@ namespace Araina {
 		double num = 0;
 		std::vector<double> n;
 		std::vector<char> c;
-		std::stack<int> parens;
+		std::vector<int> parens;
 		for (int i = 0; i < textin->Length;) {
 			if (textin[i] >= '.' && textin[i] <= '9' && textin[i] != '/') {
 				ftext = "";
@@ -374,7 +374,7 @@ namespace Araina {
 				i++;
 			}
 			else if (textin[i] == '(') {
-				parens.push(n.size());
+				parens.push_back(n.size());
 				i++;
 			}
 			else if (textin[i] == ')') {

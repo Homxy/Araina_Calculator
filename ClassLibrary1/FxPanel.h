@@ -286,7 +286,6 @@ namespace ClassLibrary1 {
 			this->button11->TabIndex = 14;
 			this->button11->Text = L"arccos";
 			this->button11->UseVisualStyleBackColor = false;
-			this->button11->Click += gcnew System::EventHandler(this, &FxPanel::button11_Click);
 			// 
 			// button12
 			// 
@@ -303,7 +302,6 @@ namespace ClassLibrary1 {
 			this->button12->TabIndex = 13;
 			this->button12->Text = L"arcsin";
 			this->button12->UseVisualStyleBackColor = false;
-			this->button12->Click += gcnew System::EventHandler(this, &FxPanel::button12_Click);
 			// 
 			// button13
 			// 
@@ -320,7 +318,6 @@ namespace ClassLibrary1 {
 			this->button13->TabIndex = 12;
 			this->button13->Text = L"tan";
 			this->button13->UseVisualStyleBackColor = false;
-			this->button13->Click += gcnew System::EventHandler(this, &FxPanel::button13_Click);
 			// 
 			// button14
 			// 
@@ -337,7 +334,6 @@ namespace ClassLibrary1 {
 			this->button14->TabIndex = 11;
 			this->button14->Text = L"cos";
 			this->button14->UseVisualStyleBackColor = false;
-			this->button14->Click += gcnew System::EventHandler(this, &FxPanel::button14_Click);
 			// 
 			// button15
 			// 
@@ -354,7 +350,6 @@ namespace ClassLibrary1 {
 			this->button15->TabIndex = 10;
 			this->button15->Text = L"sin";
 			this->button15->UseVisualStyleBackColor = false;
-			this->button15->Click += gcnew System::EventHandler(this, &FxPanel::button15_Click);
 			// 
 			// button16
 			// 
@@ -436,7 +431,6 @@ namespace ClassLibrary1 {
 			this->button20->TabIndex = 15;
 			this->button20->Text = L"arctan";
 			this->button20->UseVisualStyleBackColor = false;
-			this->button20->Click += gcnew System::EventHandler(this, &FxPanel::button20_Click);
 			// 
 			// FxPanel
 			// 
@@ -495,87 +489,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
 		VecForm->ShowDialog();
 	}
-	private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-	}
-	private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-	}
-	private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-	}
-	private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-	}
-	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-	}
-	private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-	}
-	private: System::Void FxPanel_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
-	Araina::VectorForm^ VecForm = gcnew Araina::VectorForm();
-	VecForm->ShowDialog();
-}
 
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 
-private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (total != "sin") {
-		total += button15->Text;
-		cal += "s";
-	}
-	ValueChanged(this, EventArgs::Empty);
-}
-
-private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (total != "cos") {
-		total += button15->Text;
-		cal += "c";
-	}
-	ValueChanged(this, EventArgs::Empty);
-}
-
-private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (total != "tan") {
-		total += button15->Text;
-		cal += "t";
-	}
-	ValueChanged(this, EventArgs::Empty);
-}
-
-private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (total != "arcsin") {
-		total += button15->Text;
-		cal += "as";
-	}
-	ValueChanged(this, EventArgs::Empty);
-}
-
-private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (total != "arccos") {
-		total += button15->Text;
-		cal += "ac";
-	}
-	ValueChanged(this, EventArgs::Empty);
-}
-
-private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (total != "arctan") {
-		total += button15->Text;
-		cal += "at";
-	}
-	ValueChanged(this, EventArgs::Empty);
-}
 
 private: System::Void FxPanel_Load(System::Object^ sender, System::EventArgs^ e) {
 }
